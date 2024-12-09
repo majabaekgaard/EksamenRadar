@@ -16,11 +16,14 @@ header {
     height: 100vh; /* Fuld højde af vinduet */
     background:  no-repeat center center/cover; /* Tilpas baggrundsbilledet */
     display: flex;
+    width: 100%;
     
 }
+
 .forside{
-    width: 200%;
+    width: 100%;
 }
+
 
 
 /*styling af logo */
@@ -31,6 +34,8 @@ header {
 margin-right: auto;
 
 }
+
+
 
 /* Styling af nav-bar */
 nav {
@@ -48,12 +53,13 @@ nav {
     
 }
 
+/* Styling af streg under nav bar */
 nav::before {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 2rem; /* Afstand fra venstre kant */
-    right: 2rem; /* Afstand fra højre kant */
+    left: 2%; /* Afstand fra venstre kant */
+    right: 2%; /* Afstand fra højre kant */
     height: 2px;
     background-color: #000000; /* Farve på stregen */
 }
@@ -75,10 +81,11 @@ nav::before {
     padding: 0.5rem 1rem;
     transition: background 0.3s;
     border-radius: 5px;
+    white-space: nowrap;
 }
 
 .nav-links li a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(185, 118, 118, 0.2);
 }
 
 /* Burger menu styling som helhed */
@@ -97,7 +104,7 @@ nav::before {
 .burger-menu span {
     display: block;
     height: 5px;
-    width: 110%;
+    width: 100%;
     background: var(--menu);
     border-radius: 5px;
 }
@@ -107,8 +114,8 @@ nav::before {
     display: none;
 }
 
-/* Media query til små skærme */
-@media (max-width: 768px) {
+/* Media query til telefon */
+@media (max-width: 450px) {
     /* Skjuler links som standard */
     .nav-links {
         display: none;
@@ -119,7 +126,7 @@ nav::before {
         left: 0;
         width: 100%;
         text-align: center;
-        gap: 1rem;
+        gap: 3%;
         padding: 1rem 0;
     }
 
@@ -145,11 +152,15 @@ nav::before {
         height: 25px;
         cursor: pointer;
         order: 2; /* Flyt burger-menuen til højre */
+        margin-left: auto;
+        margin-right: 1rem;
+    
     }
+
 
     /* Når checkbox er checked, vis links */
     .menu-toggle:checked ~ .nav-links {
-        display: none;
+        display: flex;
     }
 
 /*styrer det første baggrundsbillede */
@@ -167,9 +178,10 @@ header {
 }
 
 
-
-
+/* Media query til tablets */
 @media (max-width: 960px) {
+
+
     /* Skjuler links som standard */
     .nav-links {
         display: none;
@@ -180,7 +192,7 @@ header {
         left: 0;
         width: 100%;
         text-align: center;
-        gap: 1rem;
+        gap: 3%;
         padding: 1rem 0;
 
     }
@@ -214,73 +226,26 @@ header {
 
     /* Når checkbox er checked, vis links */
     .menu-toggle:checked ~ .nav-links {
-        display: none;
+        display: flex;
     }
 
 /*styrer det første baggrundsbillede */
 header {
     position: relative;
-    height: auto; /* Fuld højde af vinduet */
     background:  no-repeat center center/cover; /* Tilpas baggrundsbilledet */
     display: flex;
+    header   
+
     
 }
-.forside{
-    width: 100%;
-}
+
+
 
 }
 
-@media (max-width: 1270px) {
-   /* Styling af nav-bar */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--baggrund);
-    color: var(--menu);
-    padding: 0.5rem 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    max-width: 100%;
-}
-
-/* Navigation Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    color: var(--menu);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s;
-    border-radius: 5px;
-}
-
-.nav-links li a:hover {
-    background: rgba(184, 84, 84, 0.2);
-}
 
 
-    /*styrer det første baggrundsbillede */
-header {
-    position: relative;
-    height: auto; /* Fuld højde af vinduet */
-    background:  no-repeat center center/cover; /* Tilpas baggrundsbilledet */
-    display: flex;
-    
-}
-.forside{
-    width: 100%;
-}
 
-}
 
 
 
