@@ -142,6 +142,7 @@ nav::before {
     cursor: pointer;
     order: 2; /* Flyt burger-menuen til højre */
     flex-shrink: 0;
+   
 
 }
 
@@ -152,6 +153,7 @@ nav::before {
     width: 100%;
     background: var(--menu);
     border-radius: 5px;
+    
     
 }
 
@@ -165,12 +167,12 @@ nav::before {
 
 
 
+
 /* Media query til telefon */
 @media (max-width: 450px) {
     /* navigationsbar */
     
 
-    
     /* Viser burger-menu */
     .burger-menu {
         display: flex;
@@ -249,13 +251,16 @@ nav::before {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 50px;
-        height: 40px;
-        margin-right: 10%;
+        width: 30px;
+        height: 25px;
         cursor: pointer;
         order: 2; /* Flyt burger-menuen til højre */
-        
-    }
+        margin-left: auto;
+        margin-right: 1rem;
+        flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+            
+        }
+    
 
     /* Når checkbox er checked, vis links */
     .menu-toggle:checked ~ .nav-links {
