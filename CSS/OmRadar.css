@@ -1,0 +1,300 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EDE8E1;
+}
+
+:root{
+    --baggrund: #EDE8E1; 
+    --menu: #A53455;
+    --orange:#F49737; 
+    --blå: #0d63c0;
+}
+
+/*styling af logo */
+.logo img {
+    width: 250px;
+    height: auto;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    position:sticky;
+
+}
+
+
+/* Styling af nav-bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EDE8E1;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    margin-right: 10%;
+    z-index: 1000;
+    max-width: 100%;
+    font-size: x-large;
+  
+    
+}
+
+/* Styling af streg under nav bar */
+nav::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2%; /* Afstand fra venstre kant */
+    right: -9%; /* Afstand fra højre kant */
+    height: 2px;
+    background-color: #000000; /* Farve på stregen */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+ 
+    
+}
+
+.nav-links li a {
+    color: var(--menu);
+    text-decoration: none;
+    padding: 0.5em 3rem;
+    transition: background 0.3s;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.nav-links li a:hover {
+    background: rgba(185, 118, 118, 0.2);
+}
+
+
+
+/* Styling af dropdown-menu */
+.dropdown {
+    list-style: none;
+    position: absolute;
+    background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
+    padding: 2rem;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
+    display: none; /* Skjul dropdown som standard */
+    z-index: 100;
+    text-align: left;
+
+  }
+  
+  .dropdown li a {
+    color: var(--menu);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    white-space: nowrap;
+    transition: background 0.3s;
+  }
+  
+  .dropdown li a:hover {
+    background: rgba(185, 118, 118, 0.2);
+  }
+  
+  /* Vis dropdown-menu ved hover */
+  .nav-links li:hover .dropdown {
+    display: block;
+  }
+  
+  /* Positionering af dropdown relativt til forældre */
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links li .dropdown {
+    top: 100%; /* Placer dropdown under forældre-elementet */
+    left: -33px;
+  }
+
+
+
+/* Burger menu styling som helhed */
+.burger-menu {
+    display: none; /* Skjult som standard */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    order: 2; /* Flyt burger-menuen til højre */
+    flex-shrink: 0;
+
+
+}
+
+/* Styling af selve burger menuens dele */
+.burger-menu span {
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: var(--menu);
+    border-radius: 5px;
+    
+}
+
+/* Skjult checkbox */
+.menu-toggle {
+    display: none;
+}
+
+
+
+/* Media query til telefon */
+@media (max-width: 450px) {
+    /* navigationsbar */
+    
+    /* Skjuler links som standard */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0); /* Baggrundsfarve */
+        position: absolute;
+        top: 100%; /* Placerer dropdown-menuen lige under navigationen */
+        left: 50%;
+        width: 100%;
+        text-align: left;
+        padding: 1rem 0;
+        z-index: 999; /* Sørg for, at den vises ovenpå */
+    }
+
+    /* Styling af dropdown-menuer i burgermenu */
+    .nav-links .dropdown {
+        display: none; /* Skjul dropdowns som standard */
+    }
+
+    /* Vis dropdown-menuer ved klik */
+    .nav-links li:hover .dropdown {
+        display: block; /* Vis dropdown ved hover */
+        position: relative;
+        top: 0; /* Sørg for, at de er inden for konteksten */
+    
+    }
+
+  
+    
+    /* Viser burger-menu */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        order: 2; /* Flyt burger-menuen til højre */
+        margin-left: auto;
+        margin-right: 1rem;
+        flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+            
+        }
+    
+
+    /* Når checkbox er checked, vis links */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    
+}
+
+
+    /* Media query til tablets */
+@media (max-width: 960px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--baggrund);
+        color: white;
+        padding: 0.5rem 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+       
+    
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(254, 254, 251, 0);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 50%;
+        text-align: right;
+        padding: 1rem 0;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links .dropdown {
+        display: none;
+    }
+
+    .nav-links li:hover .dropdown {
+        display: block;
+        position: relative;
+        top: 0;
+  
+        
+    }
+
+    /* Viser burger-menu */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        order: 2; /* Flyt burger-menuen til højre */
+        
+    }
+
+    /* Når checkbox er checked, vis links */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+    .dropdown {
+        list-style: none;
+        position: absolute;
+        background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
+        padding: 2rem;
+        margin: 0;
+        margin-left: 50%;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
+        display: none; /* Skjul dropdown som standard */
+        z-index: 100;
+        text-align: left;
+
+    
+      }
+
+      .dropdown li a:hover {
+        background: rgba(185, 118, 118, 0.2);
+      }
+      
+      /* Vis dropdown-menu ved hover */
+      .nav-links li:hover .dropdown {
+        display: block;
+      }
+      
+}

@@ -9,6 +9,8 @@ body, html {
 :root{
     --baggrund: #EDE8E1; 
     --menu: #A53455;
+    --orange:#F49737; 
+    --blå: #0d63c0;
 }
 /*styrer det første baggrundsbillede */
 header {
@@ -22,6 +24,7 @@ header {
 
 .forside{
     width: 100%;
+
 }
 
 
@@ -75,6 +78,7 @@ nav::before {
     
 }
 
+
 .nav-links li a {
     color: var(--menu);
     text-decoration: none;
@@ -118,7 +122,6 @@ nav::before {
 }
 
 
-
 /* Indhold på siden */
 
 h1{
@@ -153,17 +156,19 @@ h1{
 }
 
 .billeder{
-    scale:75%;
+    max-width: 100%;
+    position:sticky;
 }
 
 /* placerer billede 2 og 3 ved siden af hinanden */
 .billede23{
     display: flex;
+
+    
 }
 
 
 /* ALT STYLING TIL SLIDER BEGYNDER HER*/
-
 
 /* POST SLIDER */
 .post-slider {
@@ -180,8 +185,6 @@ h1{
   }
   
 
-
-
 /* Styling af streg over titel */
 .slider-title::before {
     content: '';
@@ -193,23 +196,16 @@ h1{
     background-color: #000000; /* Farve på stregen */
 }
 
-
-/* Styling af streg over titel */
+/* Styling af streg under sliders */
 .post-slider::before {
     content: '';
     position: absolute;
-
     top: 110%;
     left: 4%; /* Afstand fra venstre kant */
     right: 4%; /* Afstand fra højre kant */
     height: 2px;
     background-color: #000000; /* Farve på stregen */
 }
-
-
-
-
-
 
 
     /* NÆSTE PIL - HØJRE  */
@@ -242,7 +238,7 @@ h1{
    
   }
   
-  
+
   .post-slider .post-wrapper .post {
     width: 30%;
     height: 100%; 
@@ -275,16 +271,6 @@ h1{
     
   }
   
-  
-  /* Fjernet Optional text styling 
-  .post-description {
-    font-size: 0.9em;
-    color: #666;
-    line-height: 1.4;
-    padding: 0px 5px;
-    
-  }
-  */
 
 
    /* styling af titlen*/
@@ -389,10 +375,110 @@ h1{
     background-color: #555; /* Darker color on hover */
   }
   
+  /* styling af formular */
+
+/* Nyhedsbrev-container */
+.nyhedsbrev {
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+  }
   
+  /* Overskrift og tekst */
+  .nyhedsbrev h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .nyhedsbrev p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Formular */
+  .nyhedsbrevformular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Input-felt */
+  .nyhedsbrevformular input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Knap */
+  .nyhedsbrevformular button {
+    background-color: var(--orange);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5%;
+  }
+  
+  .nyhedsbrevformular button:hover {
+    background-color: #0056b3;
+  }
 
 
 
+/* styling af footer */
+
+/* Generelle footer-indstillinger */
+.footer {
+    background-color: var(--menu); /* baggrundsfarve */
+    color: #333; /* tekstfarve */
+    padding: 5px 0;
+    font-size: 20px;
+  }
+  
+  /* Beholder for at holde indholdet centreret */
+  .container {
+    max-width: 100%;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Individuelle sektioner i footeren */
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+
+  }
+  
+  /* Overskrifter i footeren */
+  .footer-section h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+    /* styling af tekst i footer - ikke overskrift */
+  .footer-section li{
+    color: #ffffff
+  }
+
+  /* Sociale medier ikoner */
+  .social-icons a {
+    margin-right: 20px;
+    margin-top: 200px;
+    text-decoration: none;
+    
+
+  }
+  
 
 /* Media query til telefon */
 @media (max-width: 450px) {
@@ -457,7 +543,176 @@ h1{
  }
 
 
+ 
+/* ALT STYLING TIL SLIDER BEGYNDER HER*/
+
+/* POST SLIDER */
+.post-slider {
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 10%;
+    /*border: 2px solid black*/
+  }
+  
+  
+
+/* Styling af streg over titel */
+.slider-title::before {
+    content: '';
+    position: absolute;
+    bottom: -130%;
+    left: -120%; /* Afstand fra venstre kant */
+    right: -120%; /* Afstand fra højre kant */
+    height: 2px;
+    background-color: #000000; /* Farve på stregen */
+    display: none;
 }
+
+/* Styling af streg under sliders */
+.post-slider::before {
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: 4%; /* Afstand fra venstre kant */
+    right: 4%; /* Afstand fra højre kant */
+    height: 2px;
+    background-color: #000000; /* Farve på stregen */
+}
+
+
+    /* NÆSTE PIL - HØJRE  */
+  .post-slider .next {
+    position: absolute;
+    top: 30%;
+    right: 30px;
+    font-size: 2em;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+   /* TILBAGE PIL - VENSTRE  */
+  .post-slider .prev {
+      position: absolute;
+      top: 30%;
+      left: 30px ;
+      font-size: 2em;
+      color: #000000;
+      cursor: pointer;
+  }
+  
+  
+  .post-slider .post-wrapper {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+   
+  }
+  
+
+  .post-slider .post-wrapper .post {
+    width: 30%;
+    height: 100%; 
+    margin: 10px 40px;
+    display: inline-flex;
+    flex-direction:column; /* Stack image and text vertically */
+    overflow: hidden;
+    text-align: center;
+    
+  }
+  
+ 
+/* tekst beskrivelse af arrangement - styling */
+.post-slider .post-wrapper .post .post-info {
+    flex-grow: 1; /* Allow text area to grow and fill remaining space */
+    height: auto;
+    padding: 15px 5px; /* Add padding for better spacing */
+    color: #A53455;
+    font-size: larger;
+  }
+  
+  /* Billede styling */
+  .post-slider .post-wrapper .post .slider-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    
+  }
+  
+  .billeder{
+    display: block !important;
+    scale: 50%  !important;
+    margin-top: -80% !important;
+    margin-left: 2%!important;
+  }
+
+.billede23{
+    display: block;
+}
+
+   /* styling af titlen*/
+  .slider-title{
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%); /* Gør centreret præcist */
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  
+  /*  styling af "plakater"*/
+  .post {
+    width: 20%;
+    height: 100%;
+    margin: 0px 10px;
+    display: inline-flex;
+    flex-direction: column; /* Stack image and text vertically */
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    position: relative; /* Ensures overlay is positioned relative to this container */
+  }
+  
+
+
+ 
+ .nyhedsbrev {
+    padding: 15px;
+  }
+
+  .nyhedsbrev h2 {
+    font-size: 18px;
+  }
+
+  .nyhedsbrev p {
+    font-size: 12px;
+  }
+
+  .nyhedsbrevformular input,
+  .nyhedsbrevformular button {
+    max-width: 200px; /* Endnu mindre bredde */
+  }
+
+
+ .footer-section {
+    flex: 100%;
+    margin: 10px 0;
+    text-align: center;
+    transform: translateX(-20%); /* Gør centreret præcist */
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
+
+
+
 
 /* Media query til tablets */
 @media (max-width: 960px) {
@@ -524,11 +779,79 @@ h1{
     }
 
 
-}
+
+    /* TITLEN  */
+    .post-slider .slider-title {
+    text-align: center;
+    margin: 55% auto;
+    }
+    
+  
+    /* Styling af streg over titel */
+    .slider-title::before {
+      content: '';
+      position: absolute;
+      bottom: 130%;
+      left: -60%; /* Afstand fra venstre kant */
+      right: -60%; /* Afstand fra højre kant */
+      height: 2px;
+      background-color: #000000; /* Farve på stregen */
+    }
+  
+    
+
+    /* Indhold på siden */
+
+    .allesektioner{
+    margin-left: 20%;
+    font-size: small;
+    }
+
+
+    /* placerer tekst indhold og billeder ovenpå hinanden */
+    .flexindholdbilled{
+    display: block;
+    width: 100%;
+    }
+
+    .billeder{
+    scale:50%;
+    display: flex;
+    margin-left: -80px;
+    margin-top: -110px;
+    }
 
 
 
+    .nyhedsbrev {
+        padding: 20px;
+      }
+    
+      .nyhedsbrev h2 {
+        font-size: 20px;
+      }
+    
+      .nyhedsbrev p {
+        font-size: 14px;
+      }
+    
+      .nyhedsbrevformular input,
+      .nyhedsbrevformular button {
+        max-width: 250px; /* Mindre bredde til indhold */
+      }
 
-
+    .footer-section {
+        flex: 100%;
+        margin: 10px 0;
+        text-align: center;
+      }
+    
+      .social-icons a {
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-top: 0;
+        align-items: center;
+      }
+    }
 
 
