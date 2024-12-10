@@ -162,42 +162,79 @@ h1{
 }
 
 
+/* ALT STYLING TIL SLIDER BEGYNDER HER*/
+
 
 /* POST SLIDER */
 .post-slider {
     position: relative;
-    margin-top: 40%;
+    margin-top: 5%;
     margin-bottom: 10%;
     /*border: 2px solid black*/
   }
   
-  
+  /* TITLEN  */
   .post-slider .slider-title {
   text-align: center;
-  margin: 30px auto;
+  margin: 35% auto;
   }
   
+
+
+
+/* Styling af streg over titel */
+.slider-title::before {
+    content: '';
+    position: absolute;
+    bottom: 130%;
+    left: -120%; /* Afstand fra venstre kant */
+    right: -120%; /* Afstand fra højre kant */
+    height: 2px;
+    background-color: #000000; /* Farve på stregen */
+}
+
+
+/* Styling af streg over titel */
+.post-slider::before {
+    content: '';
+    position: absolute;
+
+    top: 110%;
+    left: 4%; /* Afstand fra venstre kant */
+    right: 4%; /* Afstand fra højre kant */
+    height: 2px;
+    background-color: #000000; /* Farve på stregen */
+}
+
+
+
+
+
+
+
+    /* NÆSTE PIL - HØJRE  */
   .post-slider .next {
     position: absolute;
     top: 30%;
     right: 30px;
     font-size: 3em;
-    color: #f8bc16;
+    color: #000000;
     cursor: pointer;
   }
   
+   /* TILBAGE PIL - VENSTRE  */
   .post-slider .prev {
       position: absolute;
       top: 30%;
       left: 30px ;
       font-size: 3em;
-      color: #f8bc16;
+      color: #000000;
       cursor: pointer;
   }
   
   
   .post-slider .post-wrapper {
-    width: 70%;
+    width: 75%;
     height: 50%;
     margin: 0 auto;
     overflow: hidden;
@@ -207,28 +244,152 @@ h1{
   
   
   .post-slider .post-wrapper .post {
-    width: 20%;
+    width: 30%;
     height: 100%; 
-    margin: 0px 10px;
+    margin: 10px 40px;
     display: inline-flex;
     flex-direction: column; /* Stack image and text vertically */
-    background-color: var(--maingraa);
-    border-radius: 5px;
-    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
     overflow: hidden;
     text-align: center;
     
   }
   
-  .post h4 a{
-    margin-top: -3%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 900;
-    color: var(--maingul);
+ 
+/* tekst beskrivelse af arrangement - styling */
+.post-slider .post-wrapper .post .post-info {
+    flex-grow: 1; /* Allow text area to grow and fill remaining space */
+    height: auto;
+    padding: 15px 5px; /* Add padding for better spacing */
+    color: #A53455;
+    font-size: larger;
+  }
+  
+  /* Billede styling */
+  .post-slider .post-wrapper .post .slider-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: transform 0.3s ease, filter 0.3s ease;
     
   }
+  
+  
+  /* Fjernet Optional text styling 
+  .post-description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+    padding: 0px 5px;
+    
+  }
+  */
 
 
+   /* styling af titlen*/
+  .slider-title{
+    top: -600px;
+    left: 50%;
+    transform: translateX(-50%); /* Gør centreret præcist */
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  
+  /*  styling af "plakater"*/
+  .post {
+    width: 20%;
+    height: 100%;
+    margin: 0px 10px;
+    display: inline-flex;
+    flex-direction: column; /* Stack image and text vertically */
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    position: relative; /* Ensures overlay is positioned relative to this container */
+  }
+  
+  
+  /* Overlay should only cover the individual post */
+  .post .overlay {
+    position: absolute; /* Position overlay on top of the post */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Fade-in effect */
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    gap: 7%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  
+  .post:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+  }
+  .slider-image {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 5px;
+  }
+  .post:hover .slider-image {
+    filter: blur(1px) brightness(0.95); /* Slight blur and darken on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+  }
+  
+  
+  /* Styling af knapperne - samlet */
+  .btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.6rem;
+    margin-left: -20%;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px); /* Initial position below view */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .post:hover .btn {
+    opacity: 1;
+    transform: translateY(0); /* Slide up into view */
+  }
+  .btn.buy-tickets {
+    background-color: var(--menu); /* Farven til "køb billet" knap */
+    color: #fff;
+  }
+  .btn.read-more {
+    background-color: var(--menu); /* Farven til "læs mere" knap */
+    color: #fff;
+  }
+  /* Optional: Adjust button hover effect */
+  .btn:hover {
+    background-color: #555; /* Darker color on hover */
+  }
+  
+  
 
 
 
