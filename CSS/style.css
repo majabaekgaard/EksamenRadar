@@ -163,6 +163,70 @@ h1{
 
 
 
+/* POST SLIDER */
+.post-slider {
+    position: relative;
+    margin-top: 40%;
+    margin-bottom: 10%;
+    /*border: 2px solid black*/
+  }
+  
+  
+  .post-slider .slider-title {
+  text-align: center;
+  margin: 30px auto;
+  }
+  
+  .post-slider .next {
+    position: absolute;
+    top: 30%;
+    right: 30px;
+    font-size: 3em;
+    color: #f8bc16;
+    cursor: pointer;
+  }
+  
+  .post-slider .prev {
+      position: absolute;
+      top: 30%;
+      left: 30px ;
+      font-size: 3em;
+      color: #f8bc16;
+      cursor: pointer;
+  }
+  
+  
+  .post-slider .post-wrapper {
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+   
+  }
+  
+  
+  .post-slider .post-wrapper .post {
+    width: 20%;
+    height: 100%; 
+    margin: 0px 10px;
+    display: inline-flex;
+    flex-direction: column; /* Stack image and text vertically */
+    background-color: var(--maingraa);
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+    overflow: hidden;
+    text-align: center;
+    
+  }
+  
+  .post h4 a{
+    margin-top: -3%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    color: var(--maingul);
+    
+  }
 
 
 
