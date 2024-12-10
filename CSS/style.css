@@ -28,13 +28,13 @@ header {
 
 /*styling af logo */
 .logo img {
-    width: 40%;
+    width: 50%;
     height: auto;
     text-align: center;
-margin-right: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
 
 }
-
 
 
 /* Styling af nav-bar */
@@ -97,6 +97,8 @@ nav::before {
     height: 25px;
     cursor: pointer;
     order: 2; /* Flyt burger-menuen til højre */
+    flex-shrink: 0;
+
 
 }
 
@@ -107,6 +109,7 @@ nav::before {
     width: 100%;
     background: var(--menu);
     border-radius: 5px;
+    
 }
 
 /* Skjult checkbox */
@@ -114,13 +117,65 @@ nav::before {
     display: none;
 }
 
+
+
+/* Indhold på siden */
+
+h1{
+    font-size: 35px;
+}
+.allesektioner{
+    margin-left: 2%;
+}
+
+
+/* section 3 og 4 sammen */
+.flexbox1{
+    display: flex;
+    width: 100%;
+}
+
+/* kun section 3  */
+#section3{
+    width: 40%;
+}
+
+/* kun section 4  */
+#section4{
+    width: 40%;
+    margin-left: 25px;
+}
+
+/* placerer tekst indhold og billeder ved siden af hinanden */
+.flexindholdbilled{
+    display: flex;
+    width: 100%;
+}
+
+.billeder{
+    scale:75%;
+}
+
+/* placerer billede 2 og 3 ved siden af hinanden */
+.billede23{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
 /* Media query til telefon */
 @media (max-width: 450px) {
     /* Skjuler links som standard */
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: rgba(148, 47, 47, 0.9);
+        background-color: rgba(255, 255, 255, 0.9); /* baggrundsfarve til når man trykker på burgermenu*/
         position: absolute;
         top: 100%;
         left: 0;
@@ -154,35 +209,36 @@ nav::before {
         order: 2; /* Flyt burger-menuen til højre */
         margin-left: auto;
         margin-right: 1rem;
+        flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+            
+        }
     
-    }
-
 
     /* Når checkbox er checked, vis links */
     .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
 
-/*styrer det første baggrundsbillede */
-header {
+    /*styrer det første baggrundsbillede */
+    header {
     position: relative;
     height: auto; /* Fuld højde af vinduet */
-    background:  no-repeat center center/cover; /* Tilpas baggrundsbilledet */
+    background:  no-repeat center center/cover; /* Tilpasser baggrundsbilledet */
     display: flex;
     
-}
-.forside{
+    }
+    .forside{
     width: 100%;
-}
+ }
+
 
 }
-
 
 /* Media query til tablets */
 @media (max-width: 960px) {
 
 
-    /* Skjuler links som standard */
+    /* Skjuler links/menupunkter som standard */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -197,7 +253,7 @@ header {
 
     }
 
-
+    /* navigationsbar */
     nav {
         display: flex;
         align-items: center;
@@ -229,16 +285,18 @@ header {
         display: flex;
     }
 
-/*styrer det første baggrundsbillede */
-header {
+
+    /*styrer det første baggrundsbillede */
+    header {
     position: relative;
+    height: auto; /* Fuld højde af vinduet */
     background:  no-repeat center center/cover; /* Tilpas baggrundsbilledet */
     display: flex;
-    header   
-
     
-}
-
+    }
+    .forside{
+    width: 100%;
+    }
 
 
 }
