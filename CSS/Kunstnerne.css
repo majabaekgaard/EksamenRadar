@@ -230,7 +230,7 @@ nav::before {
     padding: 3%;
 }
 
-.kunstnerinfo h3 {
+.kunstnerinfo h2 {
     margin: 0 0 10px;
     font-size: 2em;
 }
@@ -257,15 +257,62 @@ nav::before {
     border-radius: 5px;
     font-size: 0.9em;
     transition: background-color 0.3s;
-    margin-top: 4%;
-
-    
+    margin-top: 4%; 
 
 }
 
 .buttons a:hover {
     background-color: #555;
 }
+
+
+/* Implamentering af lydfil oven på billed ved hover/klik */
+/* Har fået hjælp fra ChatGPT til denne løsning: https://chatgpt.com/share/675a04f3-f74c-8003-8414-445db58c78a2*/
+
+/* Container til billede og Spotify-embed */
+.musik {
+    position: relative;
+    width: 100%; /* Fast bredde */
+    height: auto; /* Fast højde */
+    cursor: pointer;
+    overflow: hidden; /* Forhindrer elementer i at stikke ud */
+}
+
+/* Billedet */
+.musik img {
+    width: 100%; /* Gør billedet responsivt */
+    height: 100%; /* Sørger for, at det fylder hele containeren */
+    object-fit: cover; /* Bevarer billedets proportioner */
+    display: block; /* Fjerner eventuelle mellemrum */
+}
+
+/* Spotify iframe */
+.musik iframe {
+    position: absolute; /* Fjerner det fra dokumentflowet */
+    top: 0;
+    left: 0;
+    width: 100%; /* Sørger for, at iframe fylder hele containeren */
+    height: 40%; 
+    border: none; /* Fjerner ramme */
+    opacity: 0; /* Skjuler iframe som standard */
+    pointer-events: none; /* Deaktiverer interaktion */
+    transition: opacity 0.3s ease; /* Glidende overgang */
+}
+
+/* Gør iframe synlig ved hover */
+.musik:hover iframe {
+    opacity: 1; /* Gør iframe synlig */
+    pointer-events: auto; /* Tillader interaktion */
+
+}
+
+/* Klik på container viser iframe - sørger for at de virker på småskærme, uden hover*/
+.musik:focus-within iframe,
+.musik:active iframe {
+    opacity: 1;
+    pointer-events: auto; /* Aktiver interaktion */
+}
+
 
 
 /* selve boxen */
@@ -303,7 +350,7 @@ nav::before {
     padding: 3%;
 }
 
-.kunstnerinfo2 h3 {
+.kunstnerinfo2 h2 {
     margin: 0 0 10px;
     font-size: 2em;
 }
@@ -374,7 +421,7 @@ nav::before {
     padding: 3%;
 }
 
-.kunstnerinfo3 h3 {
+.kunstnerinfo3 h2 {
     margin: 0 0 10px;
     font-size: 2em;
 }
@@ -445,7 +492,7 @@ nav::before {
     padding: 3%;
 }
 
-.kunstnerinfo4 h3 {
+.kunstnerinfo4 h2 {
     margin: 0 0 10px;
     font-size: 2em;
 }
@@ -461,7 +508,7 @@ nav::before {
 .buttons4 {
     display: flex;
     justify-content: right;
-    gap: 15px;
+    gap: 2%;
 }
 
 /* tekst i knapper*/
@@ -482,7 +529,7 @@ nav::before {
     background-color: #555;
 }
 
-h3{
+h2{
     font-family: "Bangers", system-ui;
 }
 
@@ -494,8 +541,72 @@ h1{
 
 p{
     font-family: Arial, Helvetica, sans-serif;
-    
+ 
 }
+
+/* styling af footer */
+
+/* Generelle footer-indstillinger */
+.footer {
+    background-color: var(--menu); /* baggrundsfarve */
+    color: #333; /* tekstfarve */
+    padding: 5px 0;
+    font-size: 20px;
+    
+  }
+  
+  /* Beholder for at holde indholdet centreret */
+  .container {
+    max-width: 100%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Individuelle sektioner i footeren */
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+
+  }
+  
+  /* Overskrifter i footeren */
+  .footer-section h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+    font-family: "Bangers", system-ui;
+  }
+  
+    /* styling af tekst i footer - ikke overskrift */
+  .footer-section li{
+    color: #ffffff
+  }
+
+  /* Sociale medier ikoner */
+  .social-icons  {
+    margin-right: 20px;
+    margin-top: 15px;
+    text-decoration: none;
+
+  }
+
+  .fb{
+    padding-right: 15px;
+  }
+
+  .insta{
+    padding-right: 15px;
+  }
+
+  .yt{
+
+    padding-right: 15px;
+  }
+
+
 
 /* Media query til telefon */
 @media (max-width: 450px) {
@@ -706,6 +817,7 @@ p{
 
   }
 
+  
   
 }
 
