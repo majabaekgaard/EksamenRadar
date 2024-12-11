@@ -522,7 +522,57 @@ p{
     .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
+
+    .beholder {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px; /* Mellemrum mellem boksene */
+        padding: 20px;
+    }
+
+
+
+    .kunstnerbox {
+        width: 100%; /* Bokse tager hele bredden */
+        margin-bottom: 20px; /* Lidt mellemrum mellem boksene */
+    }
+
+    .buttons {
+        justify-content: center; /* Knapper centreres */
+    }
+
+
+    .kunstnerbox2 {
+        width: 100%; /* Bokse tager hele bredden */
+        margin-bottom: 20px; /* Lidt mellemrum mellem boksene */
+    }
+
+    .buttons2 {
+        justify-content: center; /* Knapper centreres */
+    }
+
+    .kunstnerbox3 {
+        width: 100%; /* Bokse tager hele bredden */
+        margin-bottom: 20px; /* Lidt mellemrum mellem boksene */
+    }
+
+    .buttons3 {
+        justify-content: center; /* Knapper centreres */
+    }
+
+    .kunstnerbox4 {
+        width: 100%; /* Bokse tager hele bredden */
+        margin-bottom: 20px; /* Lidt mellemrum mellem boksene */
+    }
+
+    .buttons4 {
+        justify-content: center; /* Knapper centreres */
+    }
 }
+
+
+
 
 
 
@@ -656,6 +706,59 @@ p{
 
   }
 
+  
+}
 
+
+/* Media query til tablets */
+@media (max-width: 700px) {
+
+    .beholder {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px; /* Mellemrum mellem boksene */
+        padding: 20px;
+    }
+    
+    .kunstnerbox {
+        width: 100%; /* Bokse tager hele bredden */
+        margin-bottom: 20px; /* Lidt mellemrum mellem boksene */
+    }
+
+    .buttons {
+        justify-content: center; /* Knapper centreres */
+    }
+
+
+    .kunstnerbox2 {
+        width: 100%; /* Bokse tager hele bredden */
+        margin-bottom: 20px; /* Lidt mellemrum mellem boksene */
+    }
+
+    .buttons2 {
+        justify-content: center; /* Knapper centreres */
+    }
+
+    .kunstnerbox3 {
+        width: 100%; /* Bokse tager hele bredden */
+        margin-bottom: 20px; /* Lidt mellemrum mellem boksene */
+    }
+
+    .buttons3 {
+        justify-content: center; /* Knapper centreres */
+    }
+
+    .kunstnerbox4 {
+        width: 100%; /* Bokse tager hele bredden */
+        margin-bottom: 20px; /* Lidt mellemrum mellem boksene */
+    }
+
+    .buttons4 {
+        justify-content: center; /* Knapper centreres */
+    }
 
     }
+
+
+    
