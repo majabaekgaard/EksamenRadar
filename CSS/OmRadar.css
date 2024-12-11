@@ -167,16 +167,146 @@ nav::before {
 
 
 /* BILLEDE af bygning*/
+
+.billedebygning {
+         
+    max-width: 100%; /* Billedet tilpasser sig containerens bredde */
+    height: auto;    /* Bevarer billedets proportioner */
+    display: block;  /* Fjern uønsket mellemrum ved brug i block layout */
+    
+
+}
+
 .Bygning {
-    scale: 50%;
-    max-width: 100%;
-    margin-left: -40px;
+    
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centrer horisontalt */
+    align-items: flex-start; /* Sørg for, at billedet starter i toppen */
+    margin-top: 110px;
+
+}
+
+
+.overlay-overskrift {
+    position: absolute;      /* Placér oven på billedet */
+    top: 50%;                /* Centrer vertikalt */
+    left: 50%;               /* Centrer horisontalt */
+    transform: translate(-50%, -50%); /* Justér for korrekt centrering */
+    color: rgb(0, 0, 0);            /* Tekstfarve */
+    text-align: center;      /* Centrer tekst */
+    max-width: 100%;          /* Begræns tekstens bredde */
+    font-size: 300%;
+    width: 300%;
+    
+}
+
+
+/* Tekst + billede indhold*/
+
+
+.intro{
+    text-align: center;
+}
+
+
+.Indhold1{
+    display: flex;
+    margin: 50px;
+}
+
+.billedekoncept{
+    width: 30%;
 }
 
 
 
+.Indhold2{
+    display: flex;
+    margin: 50px;
+    max-width: 100%;
+}
 
 
+.billedekoncept2{
+    width: 30%;
+    
+}
+
+.Indhold3{
+    display: flex;
+    margin: 50px;
+}
+
+
+.billedekoncept3{
+    width: 30%;
+}
+
+
+
+/* styling af footer */
+
+/* Generelle footer-indstillinger */
+.footer {
+    background-color: var(--menu); /* baggrundsfarve */
+    color: #333; /* tekstfarve */
+    padding: 5px 0;
+    font-size: 20px;
+  }
+  
+  /* Beholder for at holde indholdet centreret */
+  .container {
+    max-width: 100%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Individuelle sektioner i footeren */
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+
+  }
+  
+  /* Overskrifter i footeren */
+  .footer-section h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+    /* styling af tekst i footer - ikke overskrift */
+  .footer-section li{
+    color: #ffffff
+  }
+
+  /* Sociale medier ikoner */
+  .social-icons  {
+    margin-right: 20px;
+    margin-top: 15px;
+    text-decoration: none;
+
+  }
+
+  .fb{
+    padding-right: 15px;
+  }
+
+  .insta{
+    padding-right: 15px;
+  }
+
+  .yt{
+
+    padding-right: 15px;
+  }
 /* Media query til telefon */
 @media (max-width: 450px) {
     /* navigationsbar */
@@ -203,17 +333,78 @@ nav::before {
     }
 
  
+   
+    .overlay-overskrift {
+        position: absolute;      /* Placér oven på billedet */
+        top: 50%;                /* Centrer vertikalt */
+        left: 50%;               /* Centrer horisontalt */
+        transform: translate(-50%, -50%); /* Justér for korrekt centrering */
+        color: rgb(0, 0, 0);            /* Tekstfarve */
+        text-align: center;      /* Centrer tekst */
+        max-width: 100%;          /* Begræns tekstens bredde */
+        font-size: 90%;
+        width: 300%;
     
-    .Bygning {
-        scale: 25%;
+    }
+        
+    .Indhold1{
+        display: block;
+        margin: 50px;
+        text-align: center;
+        margin-left: 12%;
         max-width: 100%;
-        margin-left: -125px;
-        margin-top: -100px;
+    }
+    
+    .billedekoncept{
+        width: 100%;
     }
     
 
 
-}
+
+    .Indhold2{
+        display: block;
+        margin: 50px;
+        text-align: center;
+        margin-left: 12%;
+        max-width: 100%;
+    
+    
+    }
+    
+    .Koncept2{
+        order: 2 ; /* får billede og tekst til at bytte plads (virker pt ikke) */
+        max-width: 100%;
+      
+    }
+
+    .billedekoncept2{
+        order: 1; /* får billede og tekst til at bytte plads (virker pt ikke) */
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        
+        
+    }
+    
+
+    .Indhold3{
+        display: block;
+        margin: 50px;
+        text-align: center;
+        margin-left: 12%;
+        max-width: 100%;
+    }
+    
+    .billedekoncept3{
+        width: 100%;
+    }
+    
+
+    }
+    
+
+
 
 
     /* Media query til tablets */
@@ -336,6 +527,40 @@ nav::before {
   }
 
 
+  .overlay-overskrift {
+    position: absolute;      /* Placér oven på billedet */
+    top: 50%;                /* Centrer vertikalt */
+    left: 50%;               /* Centrer horisontalt */
+    transform: translate(-50%, -50%); /* Justér for korrekt centrering */
+    color: rgb(0, 0, 0);            /* Tekstfarve */
+    text-align: center;      /* Centrer tekst */
+    max-width: 100%;          /* Begræns tekstens bredde */
+    font-size: 250%;
+    width: 300%;
+    
+
+
+
+}
+
+
     }
 
 
+   /* Media query til tablets */
+   @media (max-width: 750px) {
+
+    .overlay-overskrift {
+        position: absolute;      /* Placér oven på billedet */
+        top: 50%;                /* Centrer vertikalt */
+        left: 50%;               /* Centrer horisontalt */
+        transform: translate(-50%, -50%); /* Justér for korrekt centrering */
+        color: rgb(0, 0, 0);            /* Tekstfarve */
+        text-align: center;      /* Centrer tekst */
+        max-width: 100%;          /* Begræns tekstens bredde */
+        font-size: 150%;
+        width: 300%;
+    
+    }
+
+}
