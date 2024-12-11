@@ -6,6 +6,15 @@ body, html {
     background-color: #EDE8E1;
 }
 
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+
 :root{
     --baggrund: #EDE8E1; 
     --menu: #A53455;
@@ -29,6 +38,7 @@ body, html {
 /* Styling af nav-bar */
 nav {
     display: flex;
+    font-family: "Bangers", system-ui;
     align-items: center;
     justify-content: space-between;
     background-color: #EDE8E1;
@@ -201,25 +211,48 @@ nav::before {
     max-width: 100%;          /* Begræns tekstens bredde */
     font-size: 300%;
     width: 300%;
+    font-family: "Bangers", system-ui;
     
 }
 
+h1,h2,h3{
+    font-family: "Bangers", system-ui;
+}
 
+
+p {
+    font-family: Helvetica, sans-serif;
+    font-size: large;
+}
 /* Tekst + billede indhold*/
 
 
-.intro{
-    text-align: center;
+
+.indhold{
+text-align: center;
+    width: 70%;
+    max-width: 100%;
+    font-size: x-large;
 }
+.intro{
+    display: flex;
+    justify-content: center; /* Centrerer horisontalt */
+    width: 100%; /* Fylder hele bredden */
+
+}
+
+
 
 
 .Indhold1{
     display: flex;
     margin: 50px;
+    width: 70%;
 }
 
 .billedekoncept{
     width: 30%;
+    margin-right: 25px;
 }
 
 
@@ -228,22 +261,26 @@ nav::before {
     display: flex;
     margin: 50px;
     max-width: 100%;
+    
 }
 
 
 .billedekoncept2{
-    width: 30%;
+    width: 25%;
+    margin-left: 25px;
     
 }
 
 .Indhold3{
     display: flex;
     margin: 50px;
+    width: 70%;
 }
 
 
 .billedekoncept3{
     width: 30%;
+    margin-right: 25px;
 }
 
 
@@ -256,6 +293,7 @@ nav::before {
     color: #333; /* tekstfarve */
     padding: 5px 0;
     font-size: 20px;
+    
   }
   
   /* Beholder for at holde indholdet centreret */
@@ -280,6 +318,7 @@ nav::before {
     margin-bottom: 20px;
     font-size: 24px;
     color: #ffffff;
+    font-family: "Bangers", system-ui;
   }
   
     /* styling af tekst i footer - ikke overskrift */
@@ -307,6 +346,8 @@ nav::before {
 
     padding-right: 15px;
   }
+
+
 /* Media query til telefon */
 @media (max-width: 450px) {
     /* navigationsbar */
@@ -346,7 +387,15 @@ nav::before {
         width: 300%;
     
     }
-        
+       
+    
+    .indhold{
+        text-align: center;
+            width: 70%;
+            max-width: 100%;
+            font-size: medium;
+        }
+
     .Indhold1{
         display: block;
         margin: 50px;
@@ -361,21 +410,19 @@ nav::before {
     
 
 
-
     .Indhold2{
-        display: block;
         margin: 50px;
         text-align: center;
         margin-left: 12%;
         max-width: 100%;
-    
+        flex-direction: column;
+        order: 2 ; /* får billede og tekst til at bytte plads  */
     
     }
     
     .Koncept2{
-        order: 2 ; /* får billede og tekst til at bytte plads (virker pt ikke) */
         max-width: 100%;
-      
+        
     }
 
     .billedekoncept2{
@@ -383,11 +430,13 @@ nav::before {
         width: 100%;
         height: auto;
         max-width: 100%;
-        
+        order: -1; /* Flyt billedet først */
+        margin-left: 0px;
         
     }
     
-
+    
+    
     .Indhold3{
         display: block;
         margin: 50px;
