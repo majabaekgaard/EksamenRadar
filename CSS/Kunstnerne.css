@@ -163,8 +163,308 @@ nav::before {
 }
 
 
+/* Indhold begynder her */
+
+.indhold{
+    text-align: center;
+        width: 70%;
+        max-width: 100%;
+        font-size: x-large;
+    }
+    .intro{
+        display: flex;
+        justify-content: center; /* Centrerer horisontalt */
+        width: 100%; /* Fylder hele bredden */
+        margin-top: 150px;
+    
+    }
+    
 
 
+/* selve boxen */
+.kunstnerbox {
+    width: 35%;
+    height: 58%;
+    margin-top: 5%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: absolute;
+    left: 10%;
+}
+
+
+
+.kunstnerbox:hover {
+    transform: scale(1.05);
+}
+
+/* selve billede */
+.kunstnerbillede {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.kunstnerinfo {
+    padding: 3%;
+}
+
+.kunstnerinfo h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.kunstnerinfo p {
+    margin: 0 0 10px;
+    color: #555;
+}
+
+/* knapper*/
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    gap: 2%;
+}
+
+/* tekst i knapper*/
+.buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--menu);
+    padding: 2% 5%;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    margin-top: 15%;
+
+    
+
+}
+
+.buttons a:hover {
+    background-color: #555;
+}
+
+
+/* selve boxen */
+.kunstnerbox2 {
+    width: 35%;
+    height: 58%;
+    margin-top: 5%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: absolute;
+    left: 53%;
+}
+
+
+
+.kunstnerbox2:hover {
+    transform: scale(1.05);
+}
+
+/* selve billede */
+.kunstnerbillede2 {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.kunstnerinfo2 {
+    padding: 3%;
+}
+
+.kunstnerinfo2 h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.kunstnerinfo2 p {
+    margin: 0 0 10px;
+    color: #555;
+}
+
+/* knapper*/
+
+.buttons2 {
+    display: flex;
+    justify-content: right;
+    gap: 2%;
+}
+
+/* tekst i knapper*/
+.buttons2 a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--menu);
+    padding: 2% 5%;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    margin-top: 15%;
+
+}
+
+.buttons2 a:hover {
+    background-color: #555;
+}
+
+
+/* selve boxen */
+.kunstnerbox3 {
+    width: 35%;
+    height: 58%;
+    margin-top: 40%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: absolute;
+    left: 10%;
+}
+
+
+
+.kunstnerbox3:hover {
+    transform: scale(1.05);
+}
+
+/* selve billede */
+.kunstnerbillede3 {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.kunstnerinfo3 {
+    padding: 3%;
+}
+
+.kunstnerinfo3 h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.kunstnerinfo3 p {
+    margin: 0 0 10px;
+    color: #555;
+}
+
+/* knapper*/
+
+.buttons3 {
+    display: flex;
+    justify-content: right;
+    gap: 2%;
+}
+
+/* tekst i knapper*/
+.buttons3 a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--menu);
+    padding: 2% 5%;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    margin-top: 15%;
+
+}
+
+.buttons3 a:hover {
+    background-color: #555;
+}
+
+
+/* selve boxen */
+.kunstnerbox4 {
+    width: 35%;
+    height: 58%;
+    margin-top: 40%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: absolute;
+    left: 53%;
+}
+
+
+
+.kunstnerbox4:hover {
+    transform: scale(1.05);
+}
+
+/* selve billede */
+.kunstnerbillede4 {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.kunstnerinfo4 {
+    padding: 3%;
+}
+
+.kunstnerinfo4 h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.kunstnerinfo4 p {
+    margin: 0 0 10px;
+    color: #555;
+}
+
+/* knapper*/
+
+.buttons4 {
+    display: flex;
+    justify-content: right;
+    gap: 2%;
+}
+
+/* tekst i knapper*/
+.buttons4 a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--menu);
+    padding: 2% 5%;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    margin-top: 15%;
+
+}
+
+.buttons4 a:hover {
+    background-color: #555;
+}
 
 
 
@@ -256,7 +556,7 @@ nav::before {
         cursor: pointer;
         order: 2; /* Flyt burger-menuen til højre */
         margin-left: auto;
-        margin-right: 1rem;
+        margin-right: 2rem;
         flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
             
         }
@@ -266,20 +566,24 @@ nav::before {
     .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
-   
+
 
 /* Styling af dropdown-menu */
 .dropdown {
     list-style: none;
     position: absolute;
-    background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
-    padding: 1rem;
+    background-color: rgba(255, 244, 244, 0.592); /* Baggrundsfarve til dropdown */
     margin: 0;
+    padding: 0;
     margin-left: 30%;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
     display: none; /* Skjul dropdown som standard */
     z-index: 100;
     text-align: left;
+    width: auto; /* Tilpasser bredden automatisk */
+    min-width: 150px; /* Minimum bredde */
+    width: 200%;
+
+    
 
   }
   
@@ -287,13 +591,19 @@ nav::before {
   .dropdown li a {
     color: var(--menu);
     text-decoration: none;
-    padding: 1rem 1rem;
+    padding: 1rem;
     display: block;
     white-space: nowrap;
     transition: background 0.3s;
 
+
   }
   
+
+  .dropdown li {
+    padding: 0px; /* Ingen ekstra padding */
+    margin: 0;  /* Ingen margin */
+  }
 
   /* Styling af hover i dropdown*/
   .dropdown li a:hover {
@@ -313,8 +623,10 @@ nav::before {
   
   .nav-links li .dropdown {
     top: 100%; /* Placer dropdown under forældre-elementet */
-    left: -33px;
+    left: -150px;
+
   }
+
 
 
     }
