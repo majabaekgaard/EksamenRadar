@@ -1,0 +1,590 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EDE8E1;
+}
+
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+h1{
+    font-family: "Bangers", system-ui;
+    font-size: 50px
+}
+
+h2{
+    font-family: "Bangers", system-ui;
+    font-size: larger;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+:root{
+    --baggrund: #EDE8E1; 
+    --menu: #A53455;
+    --orange:#F49737; 
+    --blå: #0d63c0;
+}
+
+
+/*styling af logo */
+.logo img {
+    width: 250px;
+    height: auto;
+    text-align: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    position:sticky;
+
+}
+
+
+/* Styling af nav-bar */
+nav {
+    display: flex;
+    font-family: "Bangers", system-ui;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EDE8E1;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    max-width: 100%;
+    width: 100%;
+    font-size: x-large;
+    
+  
+    
+}
+
+/* Styling af streg under nav bar */
+nav::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2%; /* Afstand fra venstre kant */
+    right: 4%; /* Afstand fra højre kant */
+    height: 2px;
+    background-color: #000000; /* Farve på stregen */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0rem;
+    margin-right: 10%;
+    gap: 2rem; /* Tilføjer mellemrum mellem menupunkterne */
+
+    
+}
+
+.nav-links li a {
+    color: var(--menu);
+    text-decoration: none;
+    padding: 0.5em 1rem;
+    transition: background 0.3s;
+    border-radius: 5px;
+    white-space: nowrap;
+    padding-bottom: 5px;
+    
+}
+
+.nav-links li a:hover {
+    background: rgba(185, 118, 118, 0.2);
+   
+
+}
+
+
+
+/* Styling af dropdown-menu */
+.dropdown {
+    list-style: none;
+    position: absolute;
+    background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
+    padding: 1rem;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
+    display: none; /* Skjul dropdown som standard */
+    z-index: 100;
+    text-align: left;
+
+  }
+  
+  /* Skriften i dropdown*/
+  .dropdown li a {
+    color: var(--menu);
+    text-decoration: none;
+    padding: 1rem 1rem;
+    display: block;
+    white-space: nowrap;
+    transition: background 0.3s;
+  }
+  
+
+  /* Styling af hover i dropdown*/
+  .dropdown li a:hover {
+    background: rgba(201, 135, 145, 0.667);
+    padding: 10px;
+  }
+  
+  /* Vis dropdown-menu ved hover */
+  .nav-links li:hover .dropdown {
+    display: block;
+  }
+  
+  /* Positionering af dropdown relativt til forældre */
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links li .dropdown {
+    top: 100%; /* Placer dropdown under forældre-elementet */
+    left: -33px;
+  }
+
+
+
+/* Burger menu styling som helhed */
+.burger-menu {
+    display: none; /* Skjult som standard */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    order: 2; /* Flyt burger-menuen til højre */
+    flex-shrink: 0;
+
+}
+
+/* Styling af selve burger menuens dele */
+.burger-menu span {
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: var(--menu);
+    border-radius: 5px;
+    
+}
+
+/* Skjult checkbox */
+.menu-toggle {
+    display: none;
+}
+
+
+/* Introduktions tekst */
+.indhold{
+    text-align: center;
+    width: 70%;
+    max-width: 100%;
+    margin-top: 150px;
+    font-size: larger;
+}
+.intro{
+    display: flex;
+    justify-content: center; /* Centrerer horisontalt */
+    width: 100%; /* Fylder hele bredden */
+
+}
+
+
+
+/*Fået hjælp fra W3schools - https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp*/
+div.scroll-beholder {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin-top: 50px;
+    display: flex;
+
+  }
+  
+  div.scroll-beholder img {
+    padding: 10px;
+  }
+
+
+  /* Styling af streg under sliders */
+div.scroll-beholder::before {
+    content: '';
+    position: absolute;
+    margin-top: -125px;
+    left: 4%; /* Afstand fra venstre kant */
+    right: 4%; /* Afstand fra højre kant */
+    height: 2px;
+    background-color: #000000; /* Farve på stregen */
+    max-width: 100%;
+
+}
+
+
+div.scroll-beholder img:hover {
+  
+  transform: scale(1.05);
+
+}
+
+.image-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Afstand til billedet */
+  color: #333; /* Mørk tekstfarve */
+}
+
+/*Fået hjælp fra W3schools til knap på billede - https://www.w3schools.com/howto/howto_css_button_on_image.asp*/
+
+.billeder {
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+
+
+.billeder .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none;
+  
+}
+
+.billeder:hover .btn {
+  display: block;
+  
+}
+
+.billeder .btn:hover {
+  background-color: black;
+  
+  
+}
+
+
+
+
+/* styling og positionering af overskrift til beholder */
+.workshops h3{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 50px;
+    font-family: "Bangers", system-ui;
+}
+
+
+
+
+/* Nyhedsbrev-container */
+.ideforslag {
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  /* Overskrift og tekst */
+  .ideforslag h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .ideforslag p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Formular */
+  .ideforslagformular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Input-felt */
+  .ideforslagformular input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+/* Input-felt */
+.ideforslagformular input[type="text"] {
+  width: 400px; /* Gør feltet bredere */
+  height: 60px; /* Gør feltet højere */
+  padding: 15px; /* Tilføjer ekstra plads indeni */
+  font-size: 18px; /* Gør teksten større */
+  resize: none; /* Forhindrer manuel ændring af størrelsen */
+}
+
+  /* Knap */
+  .ideforslagformular button {
+    background-color: var(--orange);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5%;
+  }
+  
+  .ideforslagformular button:hover {
+    background-color: var(--menu);
+  }
+
+
+/* Generelle footer-indstillinger */
+.footer {
+    background-color: var(--menu); /* baggrundsfarve */
+    color: #333; /* tekstfarve */
+    padding: 5px 0;
+    font-size: 20px;
+    
+  }
+  
+  /* Beholder for at holde indholdet centreret */
+  .container {
+    max-width: 100%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Individuelle sektioner i footeren */
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+
+  }
+  
+  /* Overskrifter i footeren */
+  .footer-section h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+    font-family: "Bangers", system-ui;
+  }
+  
+    /* styling af tekst i footer - ikke overskrift */
+  .footer-section li{
+    color: #ffffff
+  }
+
+  /* Sociale medier ikoner */
+  .social-icons  {
+    margin-right: 20px;
+    margin-top: 15px;
+    text-decoration: none;
+
+  }
+
+  .fb{
+    padding-right: 15px;
+  }
+
+  .insta{
+    padding-right: 15px;
+  }
+
+  .yt{
+
+    padding-right: 15px;
+  }
+
+
+/* Media query til telefon */
+@media (max-width: 450px) {
+    /* navigationsbar */
+    
+    /* Viser burger-menu */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        order: 2; /* Flyt burger-menuen til højre */
+        margin-left: auto;
+        margin-right: 1rem;
+        flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+            
+        }
+    
+
+    /* Når checkbox er checked, vis links */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    div.scroll-beholder {
+        overflow: auto;
+        white-space: nowrap;
+        padding: 0;
+        margin-top: 50px;
+    
+
+      }
+      
+      div.scroll-beholder img {
+        padding: 10px;
+        scale: 70%;
+       
+        
+     
+      }
+    
+      
+}
+
+
+
+
+
+    /* Media query til tablets */
+    @media (max-width: 1030px) {
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--baggrund);
+            color: white;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        
+           
+        
+        }
+    
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.269);
+            position: absolute;
+            top: 100%;
+            width: 50%;
+            left: 45%;
+            text-align: right;
+            padding: 1rem 0;
+            
+         
+        }
+    
+        .menu-toggle:checked ~ .nav-links {
+            display: flex;
+        }
+    
+        .nav-links .dropdown {
+            display: none;
+            
+        }
+    
+        .nav-links li:hover .dropdown {
+            display: block;
+            position: relative;
+            top: 0;
+            
+            
+        }
+    
+        /* Viser burger-menu */
+        .burger-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            order: 2; /* Flyt burger-menuen til højre */
+            margin-left: auto;
+            margin-right: 2rem;
+            flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+                
+            }
+        
+    
+        /* Når checkbox er checked, vis links */
+        .menu-toggle:checked ~ .nav-links {
+            display: flex;
+        }
+    
+    
+    /* Styling af dropdown-menu */
+    .dropdown {
+        list-style: none;
+        position: absolute;
+        background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
+        padding: 1rem;
+        margin: 0;
+        margin-left: 30%;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
+        display: none; /* Skjul dropdown som standard */
+        z-index: 100;
+        text-align: left;
+    
+      }
+      
+      /* Skriften i dropdown*/
+      .dropdown li a {
+        color: var(--menu);
+        text-decoration: none;
+        padding: 1rem 1rem;
+        display: block;
+        white-space: nowrap;
+        transition: background 0.3s;
+    
+      }
+      
+    
+      /* Styling af hover i dropdown*/
+      .dropdown li a:hover {
+        background: rgba(185, 118, 118, 0.2);
+        padding: 10px;
+      }
+      
+      /* Vis dropdown-menu ved hover */
+      .nav-links li:hover .dropdown {
+        display: block;
+      }
+      
+      /* Positionering af dropdown relativt til forældre */
+      .nav-links li {
+        position: relative;
+      }
+      
+      .nav-links li .dropdown {
+        top: 100%; /* Placer dropdown under forældre-elementet */
+        left: -33px;
+      }
+
+    }

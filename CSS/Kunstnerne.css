@@ -437,6 +437,7 @@ nav::before {
     display: flex;
     justify-content: right;
     gap: 2%;
+    
 }
 
 /* tekst i knapper*/
