@@ -34,6 +34,7 @@ body, html {
 nav {
     display: flex;
     align-items: center;
+    font-family: "Bangers", system-ui;
     justify-content: space-between;
     background-color: #EDE8E1;
     padding: 0.5rem 1rem;
@@ -193,6 +194,7 @@ nav::before {
         justify-content: space-evenly;
         gap: 20px; /* Mellemrum mellem boksene */
         padding: 20px;
+        margin-bottom: 150px;
     }
  
 /* selve boxen */

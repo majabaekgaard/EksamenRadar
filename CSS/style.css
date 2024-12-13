@@ -44,11 +44,12 @@ header {
 
 /*styling af logo */
 .logo img {
-    width: 50%;
+    width: 250px;
     height: auto;
     text-align: center;
     white-space: nowrap;
     flex-shrink: 0;
+    position:sticky;
 
 }
 
@@ -56,6 +57,7 @@ header {
 /* Styling af nav-bar */
 nav {
     display: flex;
+    font-family: "Bangers", system-ui;
     align-items: center;
     justify-content: space-between;
     background-color: #EDE8E1;
@@ -64,8 +66,9 @@ nav {
     top: 0;
     z-index: 1000;
     max-width: 100%;
+    width: 100%;
     font-size: x-large;
-    font-family: "Bangers", system-ui;
+    
   
     
 }
@@ -76,7 +79,7 @@ nav::before {
     position: absolute;
     bottom: 0;
     left: 2%; /* Afstand fra venstre kant */
-    right: 2%; /* Afstand fra højre kant */
+    right: 4%; /* Afstand fra højre kant */
     height: 2px;
     background-color: #000000; /* Farve på stregen */
 }
@@ -85,25 +88,79 @@ nav::before {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+    gap: 0rem;
+    margin-right: 10%;
+    gap: 2rem; /* Tilføjer mellemrum mellem menupunkterne */
+
     
 }
-
 
 .nav-links li a {
     color: var(--menu);
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5em 1rem;
     transition: background 0.3s;
     border-radius: 5px;
     white-space: nowrap;
+    padding-bottom: 5px;
+    
 }
 
 .nav-links li a:hover {
     background: rgba(185, 118, 118, 0.2);
+   
+
 }
+
+
+
+/* Styling af dropdown-menu */
+.dropdown {
+    list-style: none;
+    position: absolute;
+    background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
+    padding: 1rem;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
+    display: none; /* Skjul dropdown som standard */
+    z-index: 100;
+    text-align: left;
+
+  }
+  
+  /* Skriften i dropdown*/
+  .dropdown li a {
+    color: var(--menu);
+    text-decoration: none;
+    padding: 1rem 1rem;
+    display: block;
+    white-space: nowrap;
+    transition: background 0.3s;
+  }
+  
+
+  /* Styling af hover i dropdown*/
+  .dropdown li a:hover {
+    background: rgba(201, 135, 145, 0.667);
+    padding: 10px;
+  }
+  
+  /* Vis dropdown-menu ved hover */
+  .nav-links li:hover .dropdown {
+    display: block;
+  }
+  
+  /* Positionering af dropdown relativt til forældre */
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links li .dropdown {
+    top: 100%; /* Placer dropdown under forældre-elementet */
+    left: -33px;
+  }
+
+
 
 /* Burger menu styling som helhed */
 .burger-menu {
@@ -115,7 +172,6 @@ nav::before {
     cursor: pointer;
     order: 2; /* Flyt burger-menuen til højre */
     flex-shrink: 0;
-
 
 }
 
@@ -352,32 +408,6 @@ div.scroll-beholder img:hover {
 /* Media query til telefon */
 @media (max-width: 450px) {
     /* Skjuler links som standard */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.9); /* baggrundsfarve til når man trykker på burgermenu*/
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        gap: 3%;
-        padding: 1rem 0;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(--baggrund);
-        color: white;
-        padding: 0.5rem 1rem;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        
-    }
-
     /* Viser burger-menu */
     .burger-menu {
         display: flex;
@@ -468,22 +498,6 @@ div.scroll-beholder img:hover {
 @media (max-width: 1030px) {
 
 
-    /* Skjuler links/menupunkter som standard */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: white; /* baggrundsfarve til når man trykker på burgermenu*/
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        gap: 3%;
-        padding: 1rem 0;
-
-    }
-
-    /* navigationsbar */
     nav {
         display: flex;
         align-items: center;
@@ -491,28 +505,43 @@ div.scroll-beholder img:hover {
         background-color: var(--baggrund);
         color: white;
         padding: 0.5rem 1rem;
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 1000;
+    
        
-        
+    
     }
 
-    /* Viser burger-menu */
-    .burger-menu {
-        display: flex;
+    .nav-links {
+        display: none;
         flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 25px;
-        cursor: pointer;
-        order: 2; /* Flyt burger-menuen til højre */
+        background-color: rgba(255, 255, 255, 0.269);
+        position: absolute;
+        top: 100%;
+        width: 50%;
+        left: 45%;
+        text-align: right;
+        padding: 1rem 0;
         
+     
     }
 
-    /* Når checkbox er checked, vis links */
     .menu-toggle:checked ~ .nav-links {
         display: flex;
+    }
+
+    .nav-links .dropdown {
+        display: none;
+        
+    }
+
+    .nav-links li:hover .dropdown {
+        display: block;
+        position: relative;
+        top: 0;
+        
+        
     }
 
 

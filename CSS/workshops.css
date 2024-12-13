@@ -142,17 +142,31 @@ nav::before {
   /* Vis dropdown-menu ved hover */
   .nav-links li:hover .dropdown {
     display: block;
+    animation: fadeIn 0.3s ease-in-out;
   }
+  
   
   /* Positionering af dropdown relativt til forældre */
   .nav-links li {
     position: relative;
+  
   }
   
+  
   .nav-links li .dropdown {
-    top: 100%; /* Placer dropdown under forældre-elementet */
-    left: -33px;
+      top: 100%;
+      left: 50%; /* Centrer dropdown */
+      transform: translateX(-50%);
+      display: none;
+      position: absolute;
+      background-color: #FFF; /* Juster baggrundsfarve */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      z-index: 10;
+      text-align: left;
   }
+
+  
 
 
 
@@ -209,14 +223,20 @@ div.scroll-beholder {
     padding: 10px;
     margin-top: 50px;
     display: flex;
+    max-width: 100%;
+    
+  
 
   }
   
   div.scroll-beholder img {
     padding: 10px;
+    
+    
   }
 
 
+  /* Fået hjælp fra cht GPT til stregen */
   /* Styling af streg under sliders */
 div.scroll-beholder::before {
     content: '';
@@ -232,25 +252,18 @@ div.scroll-beholder::before {
 
 
 div.scroll-beholder img:hover {
-  
   transform: scale(1.05);
 
 }
 
-.image-title {
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px; /* Afstand til billedet */
-  color: #333; /* Mørk tekstfarve */
-}
 
 /*Fået hjælp fra W3schools til knap på billede - https://www.w3schools.com/howto/howto_css_button_on_image.asp*/
 
 .billeder {
   position: relative;
-  width: 50%;
+  width: 100%;
   height: auto;
+  max-width: 100%;  /* sørger for at knapperne følger med - og det hele forbliver responsivt */
 }
 
 
@@ -260,7 +273,7 @@ div.scroll-beholder img:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
+  background-color: var(--blå);
   color: white;
   font-size: 16px;
   padding: 12px 24px;
@@ -268,6 +281,7 @@ div.scroll-beholder img:hover {
   cursor: pointer;
   border-radius: 5px;
   display: none;
+  
   
 }
 
@@ -277,12 +291,10 @@ div.scroll-beholder img:hover {
 }
 
 .billeder .btn:hover {
-  background-color: black;
+  background-color: rgb(63, 57, 57);
   
   
 }
-
-
 
 
 /* styling og positionering af overskrift til beholder */
@@ -293,7 +305,14 @@ div.scroll-beholder img:hover {
     font-family: "Bangers", system-ui;
 }
 
-
+.image-title{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Afstand til billedet */
+    color: #000000; /* Mørk tekstfarve */
+    font-family: "Bangers", system-ui;
+}
 
 
 /* Nyhedsbrev-container */
@@ -315,14 +334,14 @@ div.scroll-beholder img:hover {
     margin-bottom: 20px;
   }
   
-  /* Formular */
+  /* selve formular */
   .ideforslagformular {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  /* Input-felt */
+  /* Input-felt - email */
   .ideforslagformular input {
     width: 300px;
     padding: 10px;
@@ -332,7 +351,7 @@ div.scroll-beholder img:hover {
     font-size: 16px;
   }
   
-/* Input-felt */
+/* Input-felt - ide */
 .ideforslagformular input[type="text"] {
   width: 400px; /* Gør feltet bredere */
   height: 60px; /* Gør feltet højere */
@@ -423,6 +442,27 @@ div.scroll-beholder img:hover {
 @media (max-width: 450px) {
     /* navigationsbar */
     
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #FFF;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 1rem 0;
+  }
+
+ .nav-links li:hover .dropdown {
+    display: none;
+  }
+
+  .dropdown {
+      position: relative;
+      top: 0;
+  }
+
+
     /* Viser burger-menu */
     .burger-menu {
         display: flex;
@@ -444,10 +484,27 @@ div.scroll-beholder img:hover {
         display: flex;
     }
 
+        /* Input-felt */
+.ideforslagformular input[type="text"] {
+  width: 200px; /* Gør feltet bredere */
+  height: 60px; /* Gør feltet højere */
+  padding: 15px; /* Tilføjer ekstra plads indeni */
+  font-size: 18px; /* Gør teksten større */
+  resize: none; /* Forhindrer manuel ændring af størrelsen */
+}
+      
+  /* Input-felt */
+  .ideforslagformular input {
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
     div.scroll-beholder {
         overflow: auto;
         white-space: nowrap;
-        padding: 0;
         margin-top: 50px;
     
 
@@ -461,9 +518,39 @@ div.scroll-beholder img:hover {
      
       }
     
-      
-}
+  
+  .billeder {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 100%;  /* sørger for at knapperne følger med - og det hele forbliver responsivt */
+    padding: 20px;
+    
+  }
+  
+  .billeder .btn {
+    position: absolute;
+    top: 200px;
+    left: 245px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: var(--blå);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    
+    
+  }
+  
+ 
+  
 
+
+}
 
 
 
@@ -482,7 +569,6 @@ div.scroll-beholder img:hover {
             top: 0;
             z-index: 1000;
         
-           
         
         }
     
@@ -586,5 +672,11 @@ div.scroll-beholder img:hover {
         top: 100%; /* Placer dropdown under forældre-elementet */
         left: -33px;
       }
+
+    }
+
+
+
+    @media (max-width: 450px) {
 
     }

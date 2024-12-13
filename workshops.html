@@ -24,49 +24,50 @@
               <span></span>
             </label>
           
-            <div class="logo">
-              <a href="index.html"><img src="/Images/logo.png" alt="logo"></a>
+            <!--sørger for at logoet fører mig til forsidens indhold og ikke startbillede-->
+            <div class="logo" id="logoforside">
+              <a href="index.html#logoforside"><img src="/Images/logo.png" alt="logo"></a>
             </div>
           
             <ul class="nav-links">
-                <li>
-                    <a href="#section1">Om Radar</a>
-                    <ul class="dropdown">
-                      <li><a href="#sub1">Historie og Koncept</a></li>
-                      <li><a href="#sub2">Om kunstnerne</a></li>
-                      <li><a href="#sub3">Gæsternes oplevelser</a></li>
-                    </ul>
-                  </li>
-
-                <li>
-                <a href="#section2">Fællesskab</a>
-                <ul class="dropdown">
-                  <li><a href="#sub1">Frivillig</a></li>
-                  <li><a href="#sub2">Donation og støtte</a></li>
-                  <li><a href="#sub3">Ny på Radar?</a></li>
-                  <li><a href="#sub4">Oplev stemningen</a></li>
-                </ul>
-              </li>
-
               <li>
-                <a href="#section3">Program</a>
-                <ul class="dropdown">
-                  <li><a href="#sub1">Kommende arrangementer</a></li>
-                  <li><a href="#sub2">Workshops</a></li>
-                </ul>
-              </li>
-
+                <a href="#">Alt om Radar</a>
+                  <ul class="dropdown">
+                    <li><a href="OmRadar.html">Historie og Koncept</a></li>
+                    <li><a href="Kunstnerne.html">Mød kunstnerne</a></li>
+                    <li><a href="#">Gæsternes oplevelser</a></li>
+                  </ul>
+                </li>
+  
               <li>
-                <a href="#section4">Kontakt</a>
-                <ul class="dropdown">
-                  <li><a href="#sub1">Åbningstider</a></li>
-                  <li><a href="#sub2">Lokation og leje</a></li>
-                  <li><a href="#sub3">Lån af udstyr</a></li>
-                  <li><a href="#sub4">Sociale Medier</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+              <a href="#">Fællesskab</a>
+              <ul class="dropdown">
+                <li><a href="#">Frivillig</a></li>
+                <li><a href="#">Donation og støtte</a></li>
+                <li><a href="#">Ny på Radar?</a></li>
+                <li><a href="#">Oplev stemningen</a></li>
+              </ul>
+            </li>
+  
+            <li>
+              <a href="#">Program</a>
+              <ul class="dropdown">
+                <li><a href="#sub1">Kommende aktiviteter</a></li>
+                <li><a href="workshops.html">Workshops og arrangementer</a></li>
+              </ul>
+            </li>
+  
+            <li>
+              <a href="#">Kontakt</a>
+              <ul class="dropdown">
+                <li><a href="#">Åbningstider</a></li>
+                <li><a href="#">Lokation og leje</a></li>
+                <li><a href="#">Lån af udstyr</a></li>
+                <li><a href="#">Sociale Medier</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
     </header>
 
 <main>
@@ -90,22 +91,26 @@
           
       <!--Fået hjælp fra W3schools til knap på billede - https://www.w3schools.com/howto/howto_css_button_on_image.asp-->
         <div class="billeder">
-        <img src="/Images/sangskrivning.png" alt="sangskrivningsworkshop">
+          <h4 class="image-title">Sangskrivning</h4>
+        <img src="/Images/sangskrivning_workshop.png" alt="sangskrivningsworkshop">
         <button class="btn">Læs mere</button>
         </div>
 
         <div class="billeder">
-        <img src="/Images/musikproduktion.png" alt="musikproduktionsworkshop">
+          <h4 class="image-title">Musikproduktion</h4>
+        <img src="/Images/dj1_workshop.png" alt="musikproduktionsworkshop">
         <button class="btn">Læs mere</button>
         </div>
 
         <div class="billeder">
-        <img src="/Images/openmic.png" alt="andet">
+          <h4 class="image-title">Undervisning af Mads Langer</h4>
+        <img src="/Images/MadsLanger1_workshops.png" alt="andet">
         <button class="btn">Læs mere</button>
         </div>
 
         <div class="billeder">
-        <img src="/Images/openmic.png" alt="andet">
+          <h4 class="image-title">Intim session med Sorthandsk</h4>
+        <img src="/Images/sorthandsk_workshop.png" alt="andet">
         <button class="btn">Læs mere</button>
         </div>
           
@@ -121,22 +126,22 @@
     <!--Fået hjælp fra W3schools - https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp-->
     <div class="scroll-beholder">
       <div class="billeder">
-        <img src="/Images/sangskrivning.png" alt="sangskrivningsworkshop">
+        <img src="/Images/openmic_arrangement.png" alt="openmic_arrangement">
         <button class="btn">Læs mere</button>
         </div>
 
         <div class="billeder">
-        <img src="/Images/musikproduktion.png" alt="musikproduktionsworkshop">
+        <img src="/Images/latterklub_arrangement.png" alt="latterklub_arrangement">
         <button class="btn">Læs mere</button>
         </div>
 
         <div class="billeder">
-        <img src="/Images/openmic.png" alt="andet">
+        <img src="/Images/friviilig_arrangement.png" alt="frivillig_oplæg_arrangement">
         <button class="btn">Læs mere</button>
         </div>
 
         <div class="billeder">
-        <img src="/Images/openmic.png" alt="andet">
+        <img src="/Images/kareoke_arrangement.png" alt="kareoke_arrangement">
         <button class="btn">Læs mere</button>
         </div>
     </section>
@@ -160,9 +165,10 @@
       <div class="footer-section">
         <h4>Kontakt</h4>
         <ul>
-          <li>Email: info@eksempel.dk</li>
-          <li>Telefon: +45 1234 5678</li>
-          <li>Adresse: Studievej 10, 1234 København</li>
+          <li>Email: kontakt(@)radarlive.dk</li>
+          <li>Booking: Booking(@)radarlive.dk</li>
+          <li>Telefon: +45 8676 0344</li>
+          <li>Karen Wegeners Gade 6 DK 8000 Aarhus C</li>
         </ul>
       </div>
 

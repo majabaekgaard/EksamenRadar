@@ -24,26 +24,60 @@
     </header>
        
     <main>
-        <nav>
-        
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="burger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </label>
-
-        <div class="logo">
-            <a href="index.html"><img src="/Images/logo.png" alt="logo"></a>
+      
+        <!--sørger for at logoet fører mig til forsidens indhold og ikke startbillede-->
+        <div class="logo" id="logoforside">
+          <a href="index.html#logoforside"><img src="/Images/logo.png" alt="logo"></a>
         </div>
-         
-            <ul class="nav-links">
-            <li><a href="#section1">Om Radar</a></li>
-            <li><a href="#section2">Fællesskab</a></li>
-            <li><a href="#section3">Program</a></li>
-            <li><a href="#section3">Kontakt</a></li>
-             </ul>
-        </nav>
+      
+        <ul class="nav-links">
+            <li>
+              <a href="#sub1">Alt om Radar</a>
+                <ul class="dropdown">
+                  <li><a href="OmRadar.html">Historie og Koncept</a></li>
+                  <li><a href="Kunstnerne.html">Mød kunstnerne</a></li>
+                  <li><a href="#">Gæsternes oplevelser</a></li>
+                </ul>
+              </li>
+
+            <li>
+            <a href="#section2">Fællesskab</a>
+            <ul class="dropdown">
+              <li><a href="#sub1">Frivillig</a></li>
+              <li><a href="#sub2">Donation og støtte</a></li>
+              <li><a href="#sub3">Ny på Radar?</a></li>
+              <li><a href="#sub4">Oplev stemningen</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#section3">Program</a>
+            <ul class="dropdown">
+              <li><a href="#sub1">Kommende aktiviteter</a></li>
+              <li><a href="workshops.html">Workshops og arrangementer</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#section4">Kontakt</a>
+            <ul class="dropdown">
+              <li><a href="#sub1">Åbningstider</a></li>
+              <li><a href="#sub2">Lokation og leje</a></li>
+              <li><a href="#sub3">Lån af udstyr</a></li>
+              <li><a href="#sub4">Sociale Medier</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    
 
 
         <div class="flexindholdbilled">
@@ -112,10 +146,12 @@
           <h3>Arrangementer</h3>
       <!--Fået hjælp fra W3schools - https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp-->
       <div class="scroll-beholder">
-          <img src="/Images/slider1.png" alt="sangskrivningsworkshop">
-          <img src="/Images/slider2.png" alt="musikproduktionsworkshop">
-          <img src="/Images/slider3.png" alt="andet">
-          <img src="/Images/slider3.png" alt="andet">
+          <img src="/Images/slider3.png" alt="Sorthandsk">
+          <img src="/Images/slider5_openmic.png" alt="openmic">
+          <img src="/Images/slider1.png" alt="Bissesvin">
+          <img src="/Images/slider4_sangskrivning.png" alt="sangskrivningsworkshop">
+          <img src="/Images/slider2.png" alt="SYL+Omsorg">
+          <img src="/Images/slider6_musikproduktion.png" alt="musikproduktionsworkshop">
         </div>
       </section>
               
@@ -141,9 +177,10 @@
             <div class="footer-section">
               <h4>Kontakt</h4>
               <ul>
-                <li>Email: info@eksempel.dk</li>
-                <li>Telefon: +45 1234 5678</li>
-                <li>Adresse: Studievej 10, 1234 København</li>
+                <li>Email: kontakt(@)radarlive.dk</li>
+                <li>Booking: Booking(@)radarlive.dk</li>
+                <li>Telefon: +45 8676 0344</li>
+                <li>Karen Wegeners Gade 6 DK 8000 Aarhus C</li>
               </ul>
             </div>
       
