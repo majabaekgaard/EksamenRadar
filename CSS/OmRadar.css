@@ -513,38 +513,25 @@ text-align: center;
     .menu-toggle:checked ~ .nav-links {
         display: flex;
         flex-direction: column;
-        background-color: rgba(224, 24, 24, 0);
         position: absolute;
         top: 70px;
-        width: 100%;
-        left: 0;
+        width: 50%;
+        left: 50%;
         padding: 20px;
         gap: 20px;
-        background-color: rgba(254, 254, 254, 0.935);
+        background-color: rgba(255, 255, 255, 0.935);
+        max-width: 100%;
+    
+        
     }
 
 
-/* Styling af dropdown-menu */
-.dropdown {
-    list-style: none;
-    position: absolute;
-    background-color: rgba(255, 14, 14, 0); /* Baggrundsfarve til dropdown */
-    padding: 1rem;
-    margin: 0;
-    margin-left: 50%;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
-    display: none; /* Skjul dropdown som standard */
-    z-index: 100;
-    text-align: left;
-    
-
-  }
   
- 
   
   /* Vis dropdown-menu ved hover */
   .nav-links li:hover .dropdown {
     display: block;
+    background-color: rgba(255, 255, 255, 0);
     
 
   }
@@ -558,6 +545,7 @@ text-align: center;
   }
   .dropdown li a {
     padding-right:  200px;
+  
    
 
 
