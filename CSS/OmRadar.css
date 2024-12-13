@@ -99,7 +99,7 @@ nav::before {
 .dropdown {
     list-style: none;
     position: absolute;
-    background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
+    background-color: rgba(252, 252, 252, 0.888); /* Baggrundsfarve til dropdown */
     padding: 1rem;
     margin: 0;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
@@ -352,6 +352,7 @@ text-align: center;
 @media (max-width: 450px) {
     /* navigationsbar */
     
+
     /* Viser burger-menu */
     .burger-menu {
         display: flex;
@@ -458,32 +459,18 @@ text-align: center;
     /* Media query til tablets */
 @media (max-width: 1030px) {
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(--baggrund);
-        color: white;
-        padding: 0.5rem 1rem;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-    
-       
-    
-    }
+   
 
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.269);
         position: absolute;
-        top: 100%;
-        width: 50%;
-        left: 45%;
         text-align: right;
-        padding: 1rem 0;
-        
+       
+       
+       
+       
+
      
     }
 
@@ -493,15 +480,17 @@ text-align: center;
 
     .nav-links .dropdown {
         display: none;
+      
         
     }
 
     .nav-links li:hover .dropdown {
-        display: block;
+        display: none;
         position: relative;
         top: 0;
+      
         
-        
+
     }
 
     /* Viser burger-menu */
@@ -512,17 +501,26 @@ text-align: center;
         width: 30px;
         height: 25px;
         cursor: pointer;
-        order: 2; /* Flyt burger-menuen til højre */
+        order: 2; /* Flytter burger-menuen til højre */
         margin-left: auto;
         margin-right: 2rem;
         flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
-            
+       
         }
     
 
     /* Når checkbox er checked, vis links */
     .menu-toggle:checked ~ .nav-links {
         display: flex;
+        flex-direction: column;
+        background-color: rgba(224, 24, 24, 0);
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        left: 0;
+        padding: 20px;
+        gap: 20px;
+        background-color: rgba(254, 254, 254, 0.935);
     }
 
 
@@ -530,55 +528,47 @@ text-align: center;
 .dropdown {
     list-style: none;
     position: absolute;
-    background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
+    background-color: rgba(255, 14, 14, 0); /* Baggrundsfarve til dropdown */
     padding: 1rem;
     margin: 0;
-    margin-left: 30%;
+    margin-left: 50%;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
     display: none; /* Skjul dropdown som standard */
     z-index: 100;
     text-align: left;
+    
 
   }
   
-  /* Skriften i dropdown*/
-  .dropdown li a {
-    color: var(--menu);
-    text-decoration: none;
-    padding: 1rem 1rem;
-    display: block;
-    white-space: nowrap;
-    transition: background 0.3s;
-
-  }
-  
-
-  /* Styling af hover i dropdown*/
-  .dropdown li a:hover {
-    background: rgba(185, 118, 118, 0.2);
-    padding: 10px;
-  }
+ 
   
   /* Vis dropdown-menu ved hover */
   .nav-links li:hover .dropdown {
     display: block;
+    
+
   }
   
   /* Positionering af dropdown relativt til forældre */
   .nav-links li {
     position: relative;
+    margin-right: 50px; /* styrer hvor langt ind menupunkterne er*/
+ 
+    
   }
-  
-  .nav-links li .dropdown {
-    top: 100%; /* Placer dropdown under forældre-elementet */
-    left: -33px;
-  }
+  .dropdown li a {
+    padding-right:  200px;
+   
 
+
+}
+  
+  
 
   .overlay-overskrift {
-    position: absolute;      /* Placér oven på billedet */
-    top: 50%;                /* Centrer vertikalt */
-    left: 50%;               /* Centrer horisontalt */
+    position: absolute;      
+    top: 50%;                
+    left: 50%;               
     transform: translate(-50%, -50%); /* Justér for korrekt centrering */
     color: rgb(0, 0, 0);            /* Tekstfarve */
     text-align: center;      /* Centrer tekst */
@@ -586,13 +576,9 @@ text-align: center;
     font-size: 250%;
     width: 300%;
     
-
-
-
 }
 
-
-    }
+ }
 
 
    /* Media query til tablets */

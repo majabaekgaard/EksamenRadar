@@ -101,7 +101,7 @@ nav::before {
 }
 
 .nav-links li a:hover {
-    background: rgba(185, 118, 118, 0.2);
+    background: rgba(179, 54, 73, 0.46);
    
 
 }
@@ -135,8 +135,8 @@ nav::before {
 
   /* Styling af hover i dropdown*/
   .dropdown li a:hover {
-    background: rgba(201, 135, 145, 0.667);
-    padding: 10px;
+    background: rgba(179, 54, 73, 0.46);
+    padding: 9px;
   }
   
   /* Vis dropdown-menu ved hover */
@@ -153,17 +153,19 @@ nav::before {
   }
   
   
+    /* styling af baggrunden + indhold til dropdown */
   .nav-links li .dropdown {
       top: 100%;
-      left: 50%; /* Centrer dropdown */
+      left: 10%; /* Centrer dropdown */
       transform: translateX(-50%);
       display: none;
       position: absolute;
-      background-color: #FFF; /* Juster baggrundsfarve */
+      background-color: #ffffffed; /* Juster baggrundsfarve */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 1rem;
       z-index: 10;
       text-align: left;
+      
   }
 
   
@@ -451,6 +453,8 @@ div.scroll-beholder img:hover {
       top: 100%;
       left: 0;
       padding: 1rem 0;
+      gap: 2rem; /* Tilføjer mellemrum mellem menupunkterne */
+
   }
 
  .nav-links li:hover .dropdown {
@@ -483,6 +487,122 @@ div.scroll-beholder img:hover {
     .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
+
+
+
+/* Styling af nav-bar */
+nav {
+  display: flex;
+  font-family: "Bangers", system-ui;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #EDE8E1;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  max-width: 100%;
+  width: 100%;
+  font-size: x-large;
+  
+
+  
+}
+
+
+
+
+/* Skriften i dropdown*/
+
+
+/* Styling af hover i dropdown*/
+.dropdown li a:hover {
+  background: rgba(179, 54, 73, 0.46);
+  padding: 9px;
+}
+
+/* Vis dropdown-menu ved hover */
+.nav-links li:hover .dropdown {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+/* Positionering af dropdown relativt til forældre */
+.nav-links li {
+  position: relative;
+
+}
+
+
+  /* styling af baggrunden + indhold til dropdown */
+.nav-links li .dropdown {
+    top: 100%;
+    left: 10%; /* Centrer dropdown */
+    transform: translateX(-50%);
+    display: none;
+    position: absolute;
+    background-color: #ffffffed; /* Juster baggrundsfarve */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 10;
+    text-align: left;
+    
+}
+
+/* Burger menu styling som helhed */
+.burger-menu {
+  display: none; /* Skjult som standard */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  order: 2; /* Flyt burger-menuen til højre */
+  flex-shrink: 0;
+
+}
+
+/* Styling af selve burger menuens dele */
+.burger-menu span {
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: var(--menu);
+  border-radius: 5px;
+  
+}
+
+/* Skjult checkbox */
+.menu-toggle {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         /* Input-felt */
 .ideforslagformular input[type="text"] {
