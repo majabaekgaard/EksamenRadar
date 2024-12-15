@@ -50,155 +50,144 @@ p{
 
 /* Styling af nav-bar */
 nav {
-    display: flex;
-    font-family: "Bangers", system-ui;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #EDE8E1;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    max-width: 100%;
-    width: 100%;
-    font-size: x-large;
-    
+  display: flex;
+  font-family: "Bangers", system-ui;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--baggrund);
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  max-width: 100%;
+  width: 100%;
+  font-size: x-large;
   
-    
+
+  
 }
 
 /* Styling af streg under nav bar */
 nav::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 2%; /* Afstand fra venstre kant */
-    right: 4%; /* Afstand fra højre kant */
-    height: 2px;
-    background-color: #000000; /* Farve på stregen */
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2%; /* Afstand fra venstre kant */
+  right: 4%; /* Afstand fra højre kant */
+  height: 2px;
+  background-color: #000000; /* Farve på stregen */
 }
 
 /* Navigation Links */
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 0rem;
-    margin-right: 10%;
-    gap: 2rem; /* Tilføjer mellemrum mellem menupunkterne */
+  list-style: none;
+  display: flex;
+  gap: 0rem;
+  margin-right: 10%;
+  gap: 2rem; /* Tilføjer mellemrum mellem menupunkterne */
+ 
 
-    
+  
 }
 
 .nav-links li a {
-    color: var(--menu);
-    text-decoration: none;
-    padding: 0.5em 1rem;
-    transition: background 0.3s;
-    border-radius: 5px;
-    white-space: nowrap;
-    padding-bottom: 5px;
-    
+  color: var(--menu);
+  text-decoration: none;
+  padding: 0.5em 1rem;
+  transition: background 0.3s;
+  border-radius: 5px;
+  white-space: nowrap;
+  padding-bottom: 5px;
+  
+  
 }
 
 .nav-links li a:hover {
-    background: rgba(179, 54, 73, 0.46);
-   
+  background: rgba(201, 135, 145, 0.667);
+ 
 
 }
 
 
 
-/* Styling af dropdown-menu */
+/* Styling af underpunkter i dropdown*/
 .dropdown {
-    list-style: none;
-    position: absolute;
-    background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
-    padding: 1rem;
-    margin: 0;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
-    display: none; /* Skjul dropdown som standard */
-    z-index: 100;
-    text-align: left;
+  list-style: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.935); /* Baggrundsfarve til underpunkter */
+  padding: 1rem;
+  margin: 0;
+  display: none; /* Skjul dropdown som standard */
+  z-index: 100;
+  text-align: left;
 
-  }
-  
-  /* Skriften i dropdown*/
-  .dropdown li a {
-    color: var(--menu);
-    text-decoration: none;
-    padding: 1rem 1rem;
-    display: block;
-    white-space: nowrap;
-    transition: background 0.3s;
-  }
-  
 
-  /* Styling af hover i dropdown*/
-  .dropdown li a:hover {
-    background: rgba(179, 54, 73, 0.46);
-    padding: 9px;
-  }
-  
-  /* Vis dropdown-menu ved hover */
-  .nav-links li:hover .dropdown {
-    display: block;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  
-  /* Positionering af dropdown relativt til forældre */
-  .nav-links li {
-    position: relative;
-  
-  }
-  
-  
-    /* styling af baggrunden + indhold til dropdown */
-  .nav-links li .dropdown {
-      top: 100%;
-      left: 10%; /* Centrer dropdown */
-      transform: translateX(-50%);
-      display: none;
-      position: absolute;
-      background-color: #ffffffed; /* Juster baggrundsfarve */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      z-index: 10;
-      text-align: left;
-      
-  }
+}
 
-  
+/* Skriften i dropdown*/
+.dropdown li a {
+  color: var(--menu);
+  text-decoration: none;
+  padding: 1rem 1rem;
+  display: block;
+  white-space: nowrap;
+  transition: background 0.3s;
+
+}
+
+
+/* Styling af hover i dropdown*/
+.dropdown li a:hover {
+  background: rgba(201, 135, 145, 0.667);
+  padding: 10px;
+}
+
+/* Vis dropdown-menu ved hover */
+.nav-links li:hover .dropdown {
+  display: block;
+}
+
+/* Positionering af dropdown relativt til forældre */
+.nav-links li {
+  position: relative;
+
+}
+
+.nav-links li .dropdown {
+  top: 100%; /* Placer dropdown under forældre-elementet */
+  left: -33px;
+}
 
 
 
 /* Burger menu styling som helhed */
 .burger-menu {
-    display: none; /* Skjult som standard */
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-    order: 2; /* Flyt burger-menuen til højre */
-    flex-shrink: 0;
+  display: none; /* Skjult som standard */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  order: 2; /* Flyt burger-menuen til højre */
+  flex-shrink: 0;
 
 }
 
 /* Styling af selve burger menuens dele */
 .burger-menu span {
-    display: block;
-    height: 5px;
-    width: 100%;
-    background: var(--menu);
-    border-radius: 5px;
-    
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: var(--menu);
+  border-radius: 5px;
+  
 }
 
 /* Skjult checkbox */
 .menu-toggle {
-    display: none;
+  display: none;
 }
+
 
 
 /* Introduktions tekst */
@@ -378,231 +367,149 @@ div.scroll-beholder img:hover {
     background-color: var(--menu);
   }
 
+/* STYLING AF FOOTER BEGYNDER HER */
 
-/* Generelle footer-indstillinger */
+/* De generelle footer-indstillinger */
 .footer {
-    background-color: var(--menu); /* baggrundsfarve */
-    color: #333; /* tekstfarve */
-    padding: 5px 0;
-    font-size: 20px;
-    
-  }
+  background-color: var(--menu); /* baggrundsfarve */
+  color: #333; /* tekstfarve */
+  padding: 5px 0;
+  font-size: 20px;
   
-  /* Beholder for at holde indholdet centreret */
-  .container {
-    max-width: 100%;
-    margin-left: 20%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  /* Individuelle sektioner i footeren */
-  .footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 200px;
+}
 
-  }
-  
-  /* Overskrifter i footeren */
-  .footer-section h4 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #ffffff;
-    font-family: "Bangers", system-ui;
-  }
-  
-    /* styling af tekst i footer - ikke overskrift */
-  .footer-section li{
-    color: #ffffff
-  }
+/* Beholder for at holde indholdet centreret */
+.container {
+  max-width: 100%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-  /* Sociale medier ikoner */
-  .social-icons  {
-    margin-right: 20px;
-    margin-top: 15px;
-    text-decoration: none;
+/* Hver sektion i footeren */
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 18px;
 
-  }
+}
 
-  .fb{
-    padding-right: 15px;
-  }
+/* Overskrifter i footeren */
+.footer-section h4 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ffffff;
+  font-family: "Bangers", system-ui;
+}
 
-  .insta{
-    padding-right: 15px;
-  }
 
-  .yt{
 
-    padding-right: 15px;
-  }
+/* Sociale medier ikoner */
+.social-icons  {
+  margin-right: 20px;
+  margin-top: 15px;
+  text-decoration: none;
+
+}
+
+.fb{
+  padding-right: 15px;
+}
+
+.insta{
+  padding-right: 15px;
+}
+
+.yt{
+
+  padding-right: 15px;
+}
+
 
 
 /* Media query til telefon */
 @media (max-width: 450px) {
-    /* navigationsbar */
-    
-    .nav-links {
+     /* navigationsbar */
+
+     .nav-links {
       display: none;
       flex-direction: column;
-      width: 100%;
-      background-color: #FFF;
       position: absolute;
-      top: 100%;
-      left: 0;
-      padding: 1rem 0;
-      gap: 2rem; /* Tilføjer mellemrum mellem menupunkterne */
-
+      text-align: right;
+  
   }
 
- .nav-links li:hover .dropdown {
-    display: none;
+  /* Viser burger-menu */
+  .burger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      order: 2; /* Flytter burger-menuen til højre */
+      margin-left: auto;
+      margin-right: 2rem;
+      flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+     
+      }
+
+  .menu-toggle:checked ~ .nav-links {
+      display: flex;
+  
+      
+  }
+
+  .nav-links .dropdown {
+      display: none; 
+      
+      
+  }
+
+  /* Styling af hover i dropdown*/
+  .dropdown li a:hover {
+  background: rgba(201, 135, 145, 0.667);
+  padding: 10px;
+  padding-right: 200px;
+}
+
+  .nav-links li:hover .dropdown {
+      display: block;
+      position: relative;
+      top: 0;
+      
+  }
+
+  /* Positionering af dropdown relativt til forældre */
+  .nav-links li {
+  position: relative;
+
+
+}
+
+  
+  /* Når checkbox er checked, vis links */
+  .menu-toggle:checked ~ .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 70px;
+      width: 50%;
+      padding: 20px;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.935);
+      max-width: 100%;
+      left: 35%;
+   
   }
 
   .dropdown {
-      position: relative;
-      top: 0;
+    background-color: rgba(255, 255, 255, 0); /* Baggrundsfarve til underpunkter */
   }
-
-
-    /* Viser burger-menu */
-    .burger-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 25px;
-        cursor: pointer;
-        order: 2; /* Flyt burger-menuen til højre */
-        margin-left: auto;
-        margin-right: 1rem;
-        flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
-            
-        }
-    
-
-    /* Når checkbox er checked, vis links */
-    .menu-toggle:checked ~ .nav-links {
-        display: flex;
-    }
-
-
-
-/* Styling af nav-bar */
-nav {
-  display: flex;
-  font-family: "Bangers", system-ui;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #EDE8E1;
-  padding: 0.5rem 1rem;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  max-width: 100%;
-  width: 100%;
-  font-size: x-large;
-  
-
-  
-}
-
-
-
-
-/* Skriften i dropdown*/
-
-
-/* Styling af hover i dropdown*/
-.dropdown li a:hover {
-  background: rgba(179, 54, 73, 0.46);
-  padding: 9px;
-}
-
-/* Vis dropdown-menu ved hover */
-.nav-links li:hover .dropdown {
-  display: block;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-
-/* Positionering af dropdown relativt til forældre */
-.nav-links li {
-  position: relative;
-
-}
-
-
-  /* styling af baggrunden + indhold til dropdown */
-.nav-links li .dropdown {
-    top: 100%;
-    left: 10%; /* Centrer dropdown */
-    transform: translateX(-50%);
-    display: none;
-    position: absolute;
-    background-color: #ffffffed; /* Juster baggrundsfarve */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    z-index: 10;
-    text-align: left;
-    
-}
-
-/* Burger menu styling som helhed */
-.burger-menu {
-  display: none; /* Skjult som standard */
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  order: 2; /* Flyt burger-menuen til højre */
-  flex-shrink: 0;
-
-}
-
-/* Styling af selve burger menuens dele */
-.burger-menu span {
-  display: block;
-  height: 5px;
-  width: 100%;
-  background: var(--menu);
-  border-radius: 5px;
-  
-}
-
-/* Skjult checkbox */
-.menu-toggle {
-  display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         /* Input-felt */
 .ideforslagformular input[type="text"] {
@@ -667,136 +574,104 @@ nav {
   }
   
  
-  
-
 
 }
 
 
 
 
+    
     /* Media query til tablets */
-    @media (max-width: 1030px) {
+@media (min-width: 451px) and (max-width: 1030px) {
 
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: var(--baggrund);
-            color: white;
-            padding: 0.5rem 1rem;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-        
-        
-        }
+   
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      text-align: right;
+     
+  }
+
+  .menu-toggle:checked ~ .nav-links {
+      display: flex;
+  }
+
+  .nav-links .dropdown {
+      display: none;
     
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            background-color: rgba(255, 255, 255, 0.269);
-            position: absolute;
-            top: 100%;
-            width: 50%;
-            left: 45%;
-            text-align: right;
-            padding: 1rem 0;
-            
-         
-        }
-    
-        .menu-toggle:checked ~ .nav-links {
-            display: flex;
-        }
-    
-        .nav-links .dropdown {
-            display: none;
-            
-        }
-    
-        .nav-links li:hover .dropdown {
-            display: block;
-            position: relative;
-            top: 0;
-            
-            
-        }
-    
-        /* Viser burger-menu */
-        .burger-menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px;
-            height: 25px;
-            cursor: pointer;
-            order: 2; /* Flyt burger-menuen til højre */
-            margin-left: auto;
-            margin-right: 2rem;
-            flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
-                
-            }
-        
-    
-        /* Når checkbox er checked, vis links */
-        .menu-toggle:checked ~ .nav-links {
-            display: flex;
-        }
-    
-    
-    /* Styling af dropdown-menu */
-    .dropdown {
-        list-style: none;
-        position: absolute;
-        background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
-        padding: 1rem;
-        margin: 0;
-        margin-left: 30%;
-        box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
-        display: none; /* Skjul dropdown som standard */
-        z-index: 100;
-        text-align: left;
-    
-      }
       
-      /* Skriften i dropdown*/
-      .dropdown li a {
-        color: var(--menu);
-        text-decoration: none;
-        padding: 1rem 1rem;
-        display: block;
-        white-space: nowrap;
-        transition: background 0.3s;
-    
-      }
+  }
+
+
+  .nav-links li:hover .dropdown {
+      display: none;
+      position: relative;
+      top: 0;
       
-    
-      /* Styling af hover i dropdown*/
-      .dropdown li a:hover {
-        background: rgba(185, 118, 118, 0.2);
-        padding: 10px;
+  }
+
+
+    /* Vis dropdown-menu ved hover */
+  .nav-links li:hover .dropdown {
+  display: block;
+
+  
+}
+
+  /* Positionering af dropdown relativt til forældre */
+  .nav-links li {
+  position: relative;
+
+
+}
+
+    /* underpunkterne */
+  .dropdown li a {
+ padding-right: 200px;
+
+  }
+  
+ .dropdown {
+  background-color: rgba(255, 255, 255, 0); /* Baggrundsfarve til underpunkter */
+}
+
+  
+  
+  /* Viser burger-menu */
+  .burger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      order: 2; /* Flytter burger-menuen til højre */
+      margin-left: auto;
+      margin-right: 2rem;
+      flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+     
       }
+  
+
+  /* Når checkbox er checked, vis links */
+  .menu-toggle:checked ~ .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 70px;
+      width: 40%;
+      left: 50%;
+      padding: 20px;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.935);
+      max-width: 100%;
       
-      /* Vis dropdown-menu ved hover */
-      .nav-links li:hover .dropdown {
-        display: block;
-      }
+  
       
-      /* Positionering af dropdown relativt til forældre */
-      .nav-links li {
-        position: relative;
-      }
-      
-      .nav-links li .dropdown {
-        top: 100%; /* Placer dropdown under forældre-elementet */
-        left: -33px;
-      }
+  }
 
-    }
+}
 
-
-
-    @media (max-width: 450px) {
-
-    }
+  

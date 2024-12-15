@@ -4,6 +4,8 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     background-color: #EDE8E1;
+    overflow-x: hidden; /* Fjerner vandret scroll */
+    overflow: visible; /* Sørg for, at ingen overflow er skjult */
 }
 
 
@@ -18,6 +20,9 @@ h1,h2, h3{
     font-family: "Bangers", system-ui;
 }
 
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 :root{
     --baggrund: #EDE8E1; 
@@ -25,6 +30,7 @@ h1,h2, h3{
     --orange:#F49737; 
     --blå: #0d63c0;
 }
+
 /*styrer det første baggrundsbillede */
 header {
     position: relative;
@@ -41,7 +47,6 @@ header {
 }
 
 
-
 /*styling af logo */
 .logo img {
     width: 250px;
@@ -53,6 +58,8 @@ header {
 
 }
 
+/* STYLING AF DROPDROWN MENU-BAR BEGYNDER HER */
+
 
 /* Styling af nav-bar */
 nav {
@@ -60,10 +67,10 @@ nav {
     font-family: "Bangers", system-ui;
     align-items: center;
     justify-content: space-between;
-    background-color: #EDE8E1;
+    background-color: var(--baggrund);
     padding: 0.5rem 1rem;
     position: sticky;
-    top: 0;
+    top:0;
     z-index: 1000;
     max-width: 100%;
     width: 100%;
@@ -91,6 +98,7 @@ nav::before {
     gap: 0rem;
     margin-right: 10%;
     gap: 2rem; /* Tilføjer mellemrum mellem menupunkterne */
+   
 
     
 }
@@ -104,27 +112,28 @@ nav::before {
     white-space: nowrap;
     padding-bottom: 5px;
     
+    
 }
 
 .nav-links li a:hover {
-    background: rgba(185, 118, 118, 0.2);
+    background: rgba(201, 135, 145, 0.667);
    
 
 }
 
 
 
-/* Styling af dropdown-menu */
+/* Styling af underpunkter i dropdown*/
 .dropdown {
     list-style: none;
     position: absolute;
-    background-color: rgba(179, 55, 55, 0); /* Baggrundsfarve til dropdown */
+    background-color: rgba(255, 255, 255, 0.935); /* Baggrundsfarve til underpunkter */
     padding: 1rem;
     margin: 0;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
     display: none; /* Skjul dropdown som standard */
     z-index: 100;
     text-align: left;
+ 
 
   }
   
@@ -136,6 +145,7 @@ nav::before {
     display: block;
     white-space: nowrap;
     transition: background 0.3s;
+
   }
   
 
@@ -153,6 +163,7 @@ nav::before {
   /* Positionering af dropdown relativt til forældre */
   .nav-links li {
     position: relative;
+  
   }
   
   .nav-links li .dropdown {
@@ -191,13 +202,18 @@ nav::before {
 }
 
 
-/* Indhold på siden */
 
+
+/* STYLING AF INDHOLD PÅ SIDEN (TEKST OG BILLEDER) - BEGYNDER HER */
+
+/* Indhold på siden */
 h1{
-    font-size: 35px;
+    font-size: 40px;
 }
 .allesektioner{
     margin-left: 2%;
+    max-width: 50%;
+    font-size: 18px;
 }
 
 
@@ -205,28 +221,29 @@ h1{
 .flexbox1{
     display: flex;
     width: 100%;
+    gap: 30px;
 }
 
-/* kun section 3  */
-#section3{
-    width: 40%;
-}
 
-/* kun section 4  */
-#section4{
-    width: 40%;
-    margin-left: 25px;
-}
 
 /* placerer tekst indhold og billeder ved siden af hinanden */
 .flexindholdbilled{
     display: flex;
     width: 100%;
+    max-width: 100%;
+    
+    
 }
 
-.billeder{
-    max-width: 100%;
-    position:sticky;
+.billeder img{
+     
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 1rem auto; 
+    width: 70%;
+    margin-top: 100px;
+      
 }
 
 /* placerer billede 2 og 3 ved siden af hinanden */
@@ -237,7 +254,7 @@ h1{
 }
 
 
-
+/* SCROLLBAR STYLING BEGYNDER HER*/
 
 /*Fået hjælp fra W3schools - https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp*/
 div.scroll-beholder {
@@ -246,14 +263,18 @@ div.scroll-beholder {
     padding: 10px;
     margin-top: 50px;
     display: flex;
-
+    max-width: 100%;
+    gap: 70px;
+    
   }
   
   div.scroll-beholder img {
     padding: 10px;
+    
+    
   }
 
-
+  /* Fået hjælp fra cht GPT til stregen */
   /* Styling af streg under sliders */
 div.scroll-beholder::before {
     content: '';
@@ -269,21 +290,75 @@ div.scroll-beholder::before {
 
 
 div.scroll-beholder img:hover {
-  
   transform: scale(1.05);
-  opacity: 0.3;
 
 }
 
+
+/*Fået hjælp fra W3schools til knap på billede - https://www.w3schools.com/howto/howto_css_button_on_image.asp*/
+
+.billederscroll {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;  /* sørger for at knapperne følger med - og det hele forbliver responsivt */
+  
+}
+
+
+.billederscroll .btn {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: var(--blå);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none;
+  
+  
+}
+
+.billederscroll:hover .btn {
+  display: block;
+  
+}
+
+.billederscroll .btn:hover {
+  background-color: rgb(63, 57, 57);
+  
+  
+}
+
+/* styling og positionering af overskrift til beholder */
 .workshops h3{
     text-align: center;
     margin-top: 100px;
-    font-size: 50px;
+    font-size: 40px;
     font-family: "Bangers", system-ui;
 }
 
+
+/* styling og positionering af overskrift til hver beholder (arrangement) */
+.image-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Afstand til billedet */
+    color: #000000; /* Mørk tekstfarve */
+    font-family: "Bangers", system-ui;
+}
+
+
+
+
   
-  /* styling af formular */
+  /* STYLING AF FORMULAR BEGYNDER HER */
 
 /* Nyhedsbrev-container */
 .nyhedsbrev {
@@ -294,14 +369,16 @@ div.scroll-beholder img:hover {
   
   /* Overskrift og tekst */
   .nyhedsbrev h2 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 10px;
-    color: #333;
+    color: #000000;
   }
   
   .nyhedsbrev p {
-    color: #666;
+    color: #000000;
     margin-bottom: 20px;
+    font-size: 18px;
+   
   }
   
   /* Formular */
@@ -339,9 +416,9 @@ div.scroll-beholder img:hover {
 
 
 
-/* styling af footer */
+/* STYLING AF FOOTER BEGYNDER HER */
 
-/* Generelle footer-indstillinger */
+/* De generelle footer-indstillinger */
 .footer {
     background-color: var(--menu); /* baggrundsfarve */
     color: #333; /* tekstfarve */
@@ -359,11 +436,14 @@ div.scroll-beholder img:hover {
     flex-wrap: wrap;
   }
   
-  /* Individuelle sektioner i footeren */
+  /* Hver sektion i footeren */
   .footer-section {
     flex: 1;
     margin: 10px;
     min-width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 18px;
 
   }
   
@@ -375,10 +455,7 @@ div.scroll-beholder img:hover {
     font-family: "Bangers", system-ui;
   }
   
-    /* styling af tekst i footer - ikke overskrift */
-  .footer-section li{
-    color: #ffffff
-  }
+ 
 
   /* Sociale medier ikoner */
   .social-icons  {
@@ -407,7 +484,17 @@ div.scroll-beholder img:hover {
 
 /* Media query til telefon */
 @media (max-width: 450px) {
-    /* Skjuler links som standard */
+
+     /* navigationsbar */
+
+     .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        text-align: right;
+    
+    }
+
     /* Viser burger-menu */
     .burger-menu {
         display: flex;
@@ -416,17 +503,66 @@ div.scroll-beholder img:hover {
         width: 30px;
         height: 25px;
         cursor: pointer;
-        order: 2; /* Flyt burger-menuen til højre */
+        order: 2; /* Flytter burger-menuen til højre */
         margin-left: auto;
-        margin-right: 1rem;
+        margin-right: 2rem;
         flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
-            
+       
         }
-    
 
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    
+        
+    }
+
+    .nav-links .dropdown {
+        display: none; 
+        
+        
+    }
+
+    /* Styling af hover i dropdown*/
+    .dropdown li a:hover {
+    background: rgba(201, 135, 145, 0.667);
+    padding: 10px;
+    padding-right: 200px;
+  }
+
+
+    .dropdown {
+    background-color: rgba(255, 255, 255, 0); /* Baggrundsfarve til underpunkter */
+  }
+    .nav-links li:hover .dropdown {
+        display: block;
+        position: relative;
+        top: 0;
+        
+    }
+
+    /* Positionering af dropdown relativt til forældre */
+    .nav-links li {
+    position: relative;
+  
+
+  }
+
+    
     /* Når checkbox er checked, vis links */
     .menu-toggle:checked ~ .nav-links {
         display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        width: 50%;
+        padding: 20px;
+        gap: 20px;
+        background-color: rgba(255, 255, 255, 0.935);
+        max-width: 100%;
+        left: 35%;
+     
+
+        
     }
 
     /*styrer det første baggrundsbillede */
@@ -437,9 +573,40 @@ div.scroll-beholder img:hover {
     display: flex;
     
     }
-    .forside{
+ 
+
+    /* section 3 og 4 sammen */
+    .flexbox1{
+    display: block;
     width: 100%;
- }
+    max-width: 100%;
+    }
+
+    /*Stemningsbilleder*/
+    .billeder {
+    width: 100%;
+    display: block;
+    margin-left: 20px;
+    margin-top: 5px;
+        }
+
+
+    /* placerer tekst indhold og billeder ovenpå hinanden */
+    .flexindholdbilled{
+    display: block;
+    width: 100%;
+    }
+
+  
+    .allesektioner{
+    margin-left: 10%;
+    font-size: small;
+    max-width: 100%;
+    font-size: 20px;
+        }
+    
+
+
 
  div.scroll-beholder {
     overflow: auto;
@@ -453,34 +620,49 @@ div.scroll-beholder img:hover {
   div.scroll-beholder img {
     padding: 10px;
     scale: 70%;
-   
+
+  }
+
+ 
+
+
+.billederscroll .btn {
+
+    top: 55%;
+    left: 65%;
+  
     
- 
-  }
-  
-  .billeder{
-    display: block !important;
-    scale: 50%  !important;
-    margin-top: -70% !important;
-    margin-left: 2%!important;
+    
   }
 
-    .billede23{
-    display: block;
-    }
+/* styling og positionering af overskrift til hvert billede */
+.image-title{
+    font-size: 30px;
+    margin-bottom: 0px; /* Afstand til billedet */
+    font-family: "Bangers", system-ui;
+    margin-left: 100px;
+
+}
+
+
+/* styling og positionering af overskrift til beholder */
+.workshops h3{
+    font-size: 30px;
+    font-family: "Bangers", system-ui;
+}
 
   
- 
+  
  .nyhedsbrev {
     padding: 15px;
   }
 
   .nyhedsbrev h2 {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .nyhedsbrev p {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .nyhedsbrevformular input,
@@ -489,42 +671,22 @@ div.scroll-beholder img:hover {
   }
 
 
+
+
 }
 
 
 
 
 /* Media query til tablets */
-@media (max-width: 1030px) {
-
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(--baggrund);
-        color: white;
-        padding: 0.5rem 1rem;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-    
-       
-    
-    }
+@media (min-width: 451px) and (max-width: 1030px)  {
 
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.269);
         position: absolute;
-        top: 100%;
-        width: 50%;
-        left: 45%;
         text-align: right;
-        padding: 1rem 0;
-        
-     
+       
     }
 
     .menu-toggle:checked ~ .nav-links {
@@ -533,14 +695,72 @@ div.scroll-beholder img:hover {
 
     .nav-links .dropdown {
         display: none;
+      
         
     }
 
+
     .nav-links li:hover .dropdown {
-        display: block;
+        display: none;
         position: relative;
         top: 0;
         
+    }
+
+
+      /* Vis dropdown-menu ved hover */
+    .nav-links li:hover .dropdown {
+    display: block;
+
+    
+  }
+  
+    /* Positionering af dropdown relativt til forældre */
+    .nav-links li {
+    position: relative;
+
+  }
+
+      /* underpunkterne */
+    .dropdown li a {
+   padding-right: 200px;
+  
+    }
+   .dropdown {
+    background-color: rgba(255, 255, 255, 0); /* Baggrundsfarve til underpunkter */
+  }
+
+  
+    /* Viser burger-menu */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        order: 2; /* Flytter burger-menuen til højre */
+        margin-left: auto;
+        margin-right: 2rem;
+        flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+       
+        }
+    
+
+    /* Når checkbox er checked, vis links */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        width: 40%;
+        left: 50%;
+        padding: 20px;
+        gap: 20px;
+        background-color: rgba(255, 255, 255, 0.935);
+        max-width: 100%;
+        
+    
         
     }
 
@@ -553,6 +773,7 @@ div.scroll-beholder img:hover {
     display: flex;
     
     }
+
     .forside{
     width: 100%;
     }
@@ -562,8 +783,10 @@ div.scroll-beholder img:hover {
     /* Indhold på siden */
 
     .allesektioner{
-    margin-left: 20%;
+    margin-left: 10%;
     font-size: small;
+    max-width: 100%;
+    font-size: 20px;
     }
 
 
@@ -573,25 +796,26 @@ div.scroll-beholder img:hover {
     width: 100%;
     }
 
-    .billeder{
-    scale:50%;
+    .billeder {
+    width: 100%;
     display: flex;
-    margin-left: -80px;
-    margin-top: -110px;
+    margin-left: 20px;
+    margin-top: 5px;
+    
     }
 
-
+   
 
     .nyhedsbrev {
         padding: 20px;
       }
     
       .nyhedsbrev h2 {
-        font-size: 20px;
+        font-size: 24px;
       }
     
       .nyhedsbrev p {
-        font-size: 14px;
+        font-size: 18px;
       }
     
       .nyhedsbrevformular input,
@@ -599,7 +823,10 @@ div.scroll-beholder img:hover {
         max-width: 250px; /* Mindre bredde til indhold */
       }
 
-    
     }
+    
+ 
+
+
 
 

@@ -41,7 +41,7 @@ nav {
     font-family: "Bangers", system-ui;
     align-items: center;
     justify-content: space-between;
-    background-color: #EDE8E1;
+    background-color: var(--baggrund);
     padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
@@ -72,6 +72,7 @@ nav::before {
     gap: 0rem;
     margin-right: 10%;
     gap: 2rem; /* Tilføjer mellemrum mellem menupunkterne */
+   
 
     
 }
@@ -85,27 +86,28 @@ nav::before {
     white-space: nowrap;
     padding-bottom: 5px;
     
+    
 }
 
 .nav-links li a:hover {
-    background: rgba(185, 118, 118, 0.2);
+    background: rgba(201, 135, 145, 0.667);
    
 
 }
 
 
 
-/* Styling af dropdown-menu */
+/* Styling af underpunkter i dropdown*/
 .dropdown {
     list-style: none;
     position: absolute;
-    background-color: rgba(252, 252, 252, 0.888); /* Baggrundsfarve til dropdown */
+    background-color: rgba(255, 255, 255, 0.935); /* Baggrundsfarve til underpunkter */
     padding: 1rem;
     margin: 0;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
     display: none; /* Skjul dropdown som standard */
     z-index: 100;
     text-align: left;
+ 
 
   }
   
@@ -117,6 +119,7 @@ nav::before {
     display: block;
     white-space: nowrap;
     transition: background 0.3s;
+
   }
   
 
@@ -134,6 +137,7 @@ nav::before {
   /* Positionering af dropdown relativt til forældre */
   .nav-links li {
     position: relative;
+  
   }
   
   .nav-links li .dropdown {
@@ -173,7 +177,7 @@ nav::before {
 
 
 
-/* Artiklens indholde begynder her */
+/* Artiklens indhold begynder her */
 
 
 /* BILLEDE af bygning*/
@@ -242,16 +246,16 @@ text-align: center;
 }
 
 
-
-
 .Indhold1{
     display: flex;
     margin: 50px;
-    width: 70%;
+    width: 90%;
+
 }
 
 .billedekoncept{
-    width: 30%;
+    width: 300px;
+    height: 300px;
     margin-right: 25px;
 }
 
@@ -266,7 +270,8 @@ text-align: center;
 
 
 .billedekoncept2{
-    width: 25%;
+    width: 300px;
+    height: 300px;
     margin-left: 25px;
     
 }
@@ -274,20 +279,21 @@ text-align: center;
 .Indhold3{
     display: flex;
     margin: 50px;
-    width: 70%;
+    width: 90%;
 }
 
 
 .billedekoncept3{
-    width: 30%;
+    width: 300px;
+    height: 300px;
     margin-right: 25px;
 }
 
 
 
-/* styling af footer */
+/* STYLING AF FOOTER BEGYNDER HER */
 
-/* Generelle footer-indstillinger */
+/* De generelle footer-indstillinger */
 .footer {
     background-color: var(--menu); /* baggrundsfarve */
     color: #333; /* tekstfarve */
@@ -305,11 +311,14 @@ text-align: center;
     flex-wrap: wrap;
   }
   
-  /* Individuelle sektioner i footeren */
+  /* Hver sektion i footeren */
   .footer-section {
     flex: 1;
     margin: 10px;
     min-width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 18px;
 
   }
   
@@ -321,10 +330,7 @@ text-align: center;
     font-family: "Bangers", system-ui;
   }
   
-    /* styling af tekst i footer - ikke overskrift */
-  .footer-section li{
-    color: #ffffff
-  }
+ 
 
   /* Sociale medier ikoner */
   .social-icons  {
@@ -348,10 +354,19 @@ text-align: center;
   }
 
 
+
 /* Media query til telefon */
 @media (max-width: 450px) {
+   
     /* navigationsbar */
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        text-align: right;
     
+    }
 
     /* Viser burger-menu */
     .burger-menu {
@@ -361,20 +376,67 @@ text-align: center;
         width: 30px;
         height: 25px;
         cursor: pointer;
-        order: 2; /* Flyt burger-menuen til højre */
+        order: 2; /* Flytter burger-menuen til højre */
         margin-left: auto;
-        margin-right: 1rem;
+        margin-right: 2rem;
         flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
-            
+       
         }
-    
 
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    
+        
+    }
+
+    .nav-links .dropdown {
+        display: none; 
+        
+        
+    }
+
+    /* Styling af hover i dropdown*/
+    .dropdown li a:hover {
+    background: rgba(201, 135, 145, 0.667);
+    padding: 10px;
+    padding-right: 200px;
+  }
+
+
+    .dropdown {
+    background-color: rgba(255, 255, 255, 0); /* Baggrundsfarve til underpunkter */
+  }
+    .nav-links li:hover .dropdown {
+        display: block;
+        position: relative;
+        top: 0;
+        
+    }
+
+    /* Positionering af dropdown relativt til forældre */
+    .nav-links li {
+    position: relative;
+  
+
+  }
+
+    
     /* Når checkbox er checked, vis links */
     .menu-toggle:checked ~ .nav-links {
         display: flex;
-    }
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        width: 50%;
+        padding: 20px;
+        gap: 20px;
+        background-color: rgba(255, 255, 255, 0.935);
+        max-width: 100%;
+        left: 35%;
+     
 
- 
+        
+    }
    
     .overlay-overskrift {
         position: absolute;      /* Placér oven på billedet */
@@ -392,17 +454,19 @@ text-align: center;
     
     .indhold{
         text-align: center;
-            width: 70%;
-            max-width: 100%;
-            font-size: medium;
+        width: 80%;
+        max-width: 100%;
+        font-size: medium;
         }
 
     .Indhold1{
-        display: block;
-        margin: 50px;
         text-align: center;
-        margin-left: 12%;
+        width: 70%;
         max-width: 100%;
+        font-size: medium;
+        display: block;
+        
+
     }
     
     .billedekoncept{
@@ -412,9 +476,8 @@ text-align: center;
 
 
     .Indhold2{
-        margin: 50px;
+    
         text-align: center;
-        margin-left: 12%;
         max-width: 100%;
         flex-direction: column;
         order: 2 ; /* får billede og tekst til at bytte plads  */
@@ -427,7 +490,7 @@ text-align: center;
     }
 
     .billedekoncept2{
-        order: 1; /* får billede og tekst til at bytte plads (virker pt ikke) */
+        order: 1; /* får billede og tekst til at bytte plads */
         width: 100%;
         height: auto;
         max-width: 100%;
@@ -435,15 +498,13 @@ text-align: center;
         margin-left: 0px;
         
     }
-    
-    
-    
+        
     .Indhold3{
-        display: block;
-        margin: 50px;
         text-align: center;
-        margin-left: 12%;
+        width: 80%;
         max-width: 100%;
+        font-size: medium;
+        display: block;
     }
     
     .billedekoncept3{
@@ -451,13 +512,13 @@ text-align: center;
     }
     
 
-    }
+ }
     
 
 
 
     /* Media query til tablets */
-@media (max-width: 1030px) {
+@media (min-width: 451px) and (max-width: 1030px) {
 
    
 
@@ -467,11 +528,6 @@ text-align: center;
         position: absolute;
         text-align: right;
        
-       
-       
-       
-
-     
     }
 
     .menu-toggle:checked ~ .nav-links {
@@ -484,15 +540,41 @@ text-align: center;
         
     }
 
+
     .nav-links li:hover .dropdown {
         display: none;
         position: relative;
         top: 0;
-      
         
-
     }
 
+
+      /* Vis dropdown-menu ved hover */
+    .nav-links li:hover .dropdown {
+    display: block;
+
+    
+  }
+  
+    /* Positionering af dropdown relativt til forældre */
+    .nav-links li {
+    position: relative;
+
+
+  }
+
+      /* underpunkterne */
+    .dropdown li a {
+   padding-right: 200px;
+  
+    }
+   .dropdown {
+    background-color: rgba(255, 255, 255, 0); /* Baggrundsfarve til underpunkter */
+  }
+
+  
+    
+    
     /* Viser burger-menu */
     .burger-menu {
         display: flex;
@@ -513,46 +595,21 @@ text-align: center;
     .menu-toggle:checked ~ .nav-links {
         display: flex;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 70px;
-        width: 50%;
+        width: 40%;
         left: 50%;
         padding: 20px;
         gap: 20px;
         background-color: rgba(255, 255, 255, 0.935);
         max-width: 100%;
+        
     
         
     }
 
 
   
-  
-  /* Vis dropdown-menu ved hover */
-  .nav-links li:hover .dropdown {
-    display: block;
-    background-color: rgba(255, 255, 255, 0);
-    
-
-  }
-  
-  /* Positionering af dropdown relativt til forældre */
-  .nav-links li {
-    position: relative;
-    margin-right: 50px; /* styrer hvor langt ind menupunkterne er*/
- 
-    
-  }
-  .dropdown li a {
-    padding-right:  200px;
-  
-   
-
-
-}
-  
-  
-
   .overlay-overskrift {
     position: absolute;      
     top: 50%;                
@@ -584,5 +641,84 @@ text-align: center;
         width: 300%;
     
     }
+
+}
+
+
+
+@media (min-width: 451px) and (max-width: 830px) {
+
+h2{
+    font-size: xx-large;
+}
+
+
+    .indhold{
+        text-align: center;
+        max-width: 100%;
+        width: 90%;
+        font-size: medium;
+        }
+
+
+
+    .Indhold1{
+        text-align: center;
+        max-width: 100%;
+        font-size: medium;
+        display: block;
+        
+
+    }
+
+
+    .billedekoncept{
+        width: 300px;
+        height: 300px;
+        margin-left: 4%;
+       
+    }
+    
+
+
+    .Indhold2{
+    
+        text-align: center;
+        max-width: 100%;
+        flex-direction: column;
+        order: 2 ; /* får billede og tekst til at bytte plads  */
+    
+    }
+    
+    .Koncept2{
+        max-width: 100%;
+        
+    }
+
+    .billedekoncept2{
+        order: 1; /* får billede og tekst til at bytte plads */
+        width: 300px;
+        height: 300px;
+        margin-left: 30%;
+        order: -1; /* Flyt billedet først */
+      
+        
+    }
+        
+    .Indhold3{
+        text-align: center;
+     
+        max-width: 100%;
+        font-size: medium;
+        display: block;
+    }
+    
+    .billedekoncept3{
+        width: 300px;
+        height: 300px;
+        margin-left: 4%;
+       
+    }
+
 
 }
