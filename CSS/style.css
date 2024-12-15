@@ -4,8 +4,9 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     background-color: #EDE8E1;
-    overflow-x: hidden; /* Fjerner vandret scroll */
-    overflow: visible; /* Sørg for, at ingen overflow er skjult */
+    
+
+  
 }
 
 
@@ -39,6 +40,7 @@ header {
     display: flex;
     width: 100%;
     
+    
 }
 
 .forside{
@@ -55,6 +57,10 @@ header {
     white-space: nowrap;
     flex-shrink: 0;
     position:sticky;
+    max-width: 100%;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 
@@ -68,15 +74,16 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: var(--baggrund);
-    padding: 0.5rem 1rem;
+    padding: 0.5;
     position: sticky;
     top:0;
     z-index: 1000;
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
     font-size: x-large;
     
-  
+   
+
     
 }
 
@@ -86,7 +93,7 @@ nav::before {
     position: absolute;
     bottom: 0;
     left: 2%; /* Afstand fra venstre kant */
-    right: 4%; /* Afstand fra højre kant */
+    right: 2%; /* Afstand fra højre kant */
     height: 2px;
     background-color: #000000; /* Farve på stregen */
 }
@@ -95,10 +102,9 @@ nav::before {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 0rem;
+    gap: 2rem; 
     margin-right: 10%;
-    gap: 2rem; /* Tilføjer mellemrum mellem menupunkterne */
-   
+    
 
     
 }
@@ -115,11 +121,13 @@ nav::before {
     
 }
 
+
 .nav-links li a:hover {
     background: rgba(201, 135, 145, 0.667);
    
 
 }
+
 
 
 
@@ -168,8 +176,13 @@ nav::before {
   
   .nav-links li .dropdown {
     top: 100%; /* Placer dropdown under forældre-elementet */
-    left: -33px;
-  }
+    position: absolute;
+    z-index: 1000; /* Sørger for, at dropdown vises over andre elementer */
+        left: 0; /* Juster venstre afstand for at få den til at alignere korrekt */
+        margin-top: 5px; /* Tilføj lidt margin for at undgå overlap */
+      }
+    
+  
 
 
 
@@ -183,8 +196,12 @@ nav::before {
     cursor: pointer;
     order: 2; /* Flyt burger-menuen til højre */
     flex-shrink: 0;
+    position: relative;
 
 }
+
+
+
 
 /* Styling af selve burger menuens dele */
 .burger-menu span {
@@ -195,6 +212,8 @@ nav::before {
     border-radius: 5px;
     
 }
+
+
 
 /* Skjult checkbox */
 .menu-toggle {
@@ -231,6 +250,7 @@ h1{
     display: flex;
     width: 100%;
     max-width: 100%;
+   
     
     
 }
@@ -243,12 +263,16 @@ h1{
     margin: 1rem auto; 
     width: 70%;
     margin-top: 100px;
+    max-width: 100%;
+   
       
 }
 
 /* placerer billede 2 og 3 ved siden af hinanden */
 .billede23{
     display: flex;
+    max-width: 100%;
+
 
     
 }
@@ -265,6 +289,7 @@ div.scroll-beholder {
     display: flex;
     max-width: 100%;
     gap: 70px;
+   
     
   }
   
@@ -492,6 +517,7 @@ div.scroll-beholder img:hover {
         flex-direction: column;
         position: absolute;
         text-align: right;
+        
     
     }
 
@@ -507,17 +533,20 @@ div.scroll-beholder img:hover {
         margin-left: auto;
         margin-right: 2rem;
         flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+      
        
         }
 
     .menu-toggle:checked ~ .nav-links {
         display: flex;
+      
     
         
     }
 
     .nav-links .dropdown {
         display: none; 
+    
         
         
     }
@@ -532,17 +561,20 @@ div.scroll-beholder img:hover {
 
     .dropdown {
     background-color: rgba(255, 255, 255, 0); /* Baggrundsfarve til underpunkter */
+  
   }
     .nav-links li:hover .dropdown {
         display: block;
         position: relative;
         top: 0;
+       
         
     }
 
     /* Positionering af dropdown relativt til forældre */
     .nav-links li {
     position: relative;
+    
   
 
   }
@@ -554,7 +586,7 @@ div.scroll-beholder img:hover {
         flex-direction: column;
         position: fixed;
         top: 70px;
-        width: 50%;
+        width: 55%;
         padding: 20px;
         gap: 20px;
         background-color: rgba(255, 255, 255, 0.935);
@@ -584,10 +616,11 @@ div.scroll-beholder img:hover {
 
     /*Stemningsbilleder*/
     .billeder {
-    width: 100%;
+    width: 90%;
     display: block;
     margin-left: 20px;
     margin-top: 5px;
+    max-width: 100%;
         }
 
 
@@ -681,6 +714,29 @@ div.scroll-beholder img:hover {
 /* Media query til tablets */
 @media (min-width: 451px) and (max-width: 1030px)  {
 
+
+
+    /* Styling af nav-bar */
+nav {
+    display: flex;
+    font-family: "Bangers", system-ui;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--baggrund);
+    padding: 0.5;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    width: 100%;
+    max-width: 100%;
+    font-size: x-large;
+    overflow: hidden;
+    
+    
+   
+
+    
+}
     .nav-links {
         display: none;
         flex-direction: column;
@@ -719,11 +775,13 @@ div.scroll-beholder img:hover {
     .nav-links li {
     position: relative;
 
+
   }
 
       /* underpunkterne */
     .dropdown li a {
    padding-right: 200px;
+ 
   
     }
    .dropdown {
@@ -731,6 +789,8 @@ div.scroll-beholder img:hover {
   }
 
   
+    
+    
     /* Viser burger-menu */
     .burger-menu {
         display: flex;
@@ -743,10 +803,14 @@ div.scroll-beholder img:hover {
         margin-left: auto;
         margin-right: 2rem;
         flex-shrink: 0;  /* sørger for at den ikke bliver mindre, men forbliver samme størrelse */
+        max-width: 100%;
+        
+
        
         }
     
 
+        
     /* Når checkbox er checked, vis links */
     .menu-toggle:checked ~ .nav-links {
         display: flex;
@@ -771,11 +835,14 @@ div.scroll-beholder img:hover {
     height: auto; /* Fuld højde af vinduet */
     background:  no-repeat center center/cover; /* Tilpas baggrundsbilledet */
     display: flex;
+    max-width: 100%;
+
     
     }
 
     .forside{
     width: 100%;
+    max-width: 100%;
     }
 
 
@@ -783,10 +850,13 @@ div.scroll-beholder img:hover {
     /* Indhold på siden */
 
     .allesektioner{
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     font-size: small;
     max-width: 100%;
     font-size: 20px;
+   
+    
     }
 
 
@@ -794,13 +864,16 @@ div.scroll-beholder img:hover {
     .flexindholdbilled{
     display: block;
     width: 100%;
+    
     }
 
     .billeder {
-    width: 100%;
+    width: 90%;
     display: flex;
-    margin-left: 20px;
+    margin-left: 50px;
     margin-top: 5px;
+    max-width: 100%;
+   
     
     }
 
