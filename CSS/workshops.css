@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #EDE8E1;
+    background-color: var(--baggrund);
 }
 
 .bangers-regular {
@@ -40,8 +40,6 @@ p{
 .logo img {
     width: 250px;
     height: auto;
-    text-align: center;
-    white-space: nowrap;
     flex-shrink: 0;
     position:sticky;
 
@@ -263,7 +261,6 @@ div.scroll-beholder img:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   background-color: var(--blå);
   color: white;
   font-size: 16px;
@@ -284,7 +281,6 @@ div.scroll-beholder img:hover {
 .billeder .btn:hover {
   background-color: rgb(63, 57, 57);
   
-  
 }
 
 
@@ -298,7 +294,7 @@ div.scroll-beholder img:hover {
 
 .image-title{
     text-align: center;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 10px; /* Afstand til billedet */
     color: #000000; /* Mørk tekstfarve */
@@ -306,7 +302,7 @@ div.scroll-beholder img:hover {
 }
 
 
-/* Nyhedsbrev-container */
+/* Ideforslag-container */
 .ideforslag {
     text-align: center;
     padding: 30px;
@@ -332,6 +328,15 @@ div.scroll-beholder img:hover {
     align-items: center;
   }
   
+
+
+/* Formular container */
+.formular-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
   /* Input-felt - email */
   .ideforslagformular input {
     width: 300px;
@@ -366,6 +371,30 @@ div.scroll-beholder img:hover {
   .ideforslagformular button:hover {
     background-color: var(--menu);
   }
+
+
+  
+/* Tak for svar-besked */
+.thank-you-message {
+  display: none;
+  background-color: var(--blå);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-family: "Bangers", system-ui;
+  font-size: larger;
+}
+
+/* Vis beskeden og skjul formularen, når checkbox er markeret */
+#form-sent:checked ~ .formular-container .thank-you-message {
+  display: block;
+}
+
+#form-sent:checked ~ .formular-container .ideforslagformular {
+  display: none;
+}
 
 /* STYLING AF FOOTER BEGYNDER HER */
 
@@ -488,7 +517,7 @@ div.scroll-beholder img:hover {
   .nav-links li {
   position: relative;
 
-
+  
 }
 
   
@@ -541,7 +570,6 @@ div.scroll-beholder img:hover {
         padding: 10px;
         scale: 70%;
        
-        
      
       }
     
@@ -557,10 +585,9 @@ div.scroll-beholder img:hover {
   
   .billeder .btn {
     position: absolute;
-    top: 200px;
-    left: 245px;
+    top: 260px;
+    left: 235px;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     background-color: var(--blå);
     color: white;
     font-size: 16px;
@@ -573,12 +600,16 @@ div.scroll-beholder img:hover {
     
   }
   
- 
+  .image-title{
+    font-size: 30px;
+    margin-bottom: 0px; /* Afstand til billedet */
+    font-family: "Bangers", system-ui;
+    margin-left: 100px;
 
 }
 
 
-
+}
 
     
     /* Media query til tablets */
@@ -632,7 +663,7 @@ div.scroll-beholder img:hover {
  padding-right: 200px;
 
   }
-  
+
  .dropdown {
   background-color: rgba(255, 255, 255, 0); /* Baggrundsfarve til underpunkter */
 }
@@ -672,6 +703,30 @@ div.scroll-beholder img:hover {
       
   }
 
+
+  .billeder .btn {
+    position: absolute;
+    top: 250px;
+    left: 245px;
+    transform: translate(-50%, -50%);
+    background-color: var(--blå);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    
+    
+  }
+
+  .image-title{
+    font-size: 30px;
+    
+    
+
+}
 }
 
   

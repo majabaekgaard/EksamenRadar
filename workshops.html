@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koncerter og arrangementer | Radar</title>
+    <title> Radar | Workshops og arrangementer</title>
     <link rel="stylesheet" href="/CSS/workshops.css">
-</head>
-<body>
-    
-<style>
+
+  <meta name="title" content="Radar | Workshops og arrangementer">
+  <meta name="description" content="Underside der fortæller om Radars forskellige muligheder for workshops og arrangementer.  Her er der også mulighed for selv at komme med ideer til kommende workshops og andre arrangementer.">
+  <meta name="keywords" content="Ideer til workshops, arrangementer for unge,arrangementer med arbejdet, fællesskab, Radar, spillested, konceptet, studerende, musik, workshops, undervisning, underholdning, sangskrivning, musikproduktion, open mic, kareoke, frivillighed">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Danish">
+  <meta name="author" content="Maja Camilla Bækgaard">
+
+
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Poppins:wght@100;400&display=swap');
     </style>
+</head>
+
+    
+
 
 <body>
     
 
     <header>
+      <!--Fået hjælp til nav bar vha af ChatGPT - https://chatgpt.com/share/67607854-0e70-8003-b74b-6d5b4847913b-->
         <nav>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="burger-menu">
@@ -31,7 +42,7 @@
           
             <ul class="nav-links">
               <li>
-                <a href="#">Alt om Radar</a>
+                <a href="#sub">Om Radar</a>
                   <ul class="dropdown">
                     <li><a href="OmRadar.html">Historie og Koncept</a></li>
                     <li><a href="Kunstnerne.html">Mød kunstnerne</a></li>
@@ -40,19 +51,20 @@
                 </li>
   
               <li>
-              <a href="#">Fællesskab</a>
+              <a href="#sub">Fællesskab</a>
               <ul class="dropdown">
-                <li><a href="#">Frivillig</a></li>
-                <li><a href="#">Donation og støtte</a></li>
-                <li><a href="#">Ny på Radar?</a></li>
-                <li><a href="#">Oplev stemningen</a></li>
+                <li><a href="#sub">Frivillig</a></li>
+                <li><a href="#sub">Donation og støtte</a></li>
+                <li><a href="#sub">Ny på Radar?</a></li>
+                <li><a href="#sub">Oplev stemningen</a></li>
               </ul>
             </li>
   
             <li>
-              <a href="#">Program</a>
+              <a href="#sub">Program</a>
               <ul class="dropdown">
-                <li><a href="#sub1">Kommende aktiviteter</a></li>
+                <li><a href="#sub">Koncerter</a></li>
+                <li><a href="#sub">Kommende aktiviteter</a></li>
                 <li><a href="workshops.html">Workshops & <br> arrangementer</a></li>
               </ul>
             </li>
@@ -60,10 +72,11 @@
             <li>
               <a href="#">Kontakt</a>
               <ul class="dropdown">
-                <li><a href="#">Åbningstider</a></li>
-                <li><a href="#">Lokation og leje</a></li>
-                <li><a href="#">Lån af udstyr</a></li>
-                <li><a href="#">Sociale Medier</a></li>
+                <li><a href="#sub">Åbningstider</a></li>
+                <li><a href="#sub">Lokation og leje</a></li>
+                <li><a href="#sub">Lån af udstyr</a></li>
+                <li><a href="#sub">Studierabat</a></li>
+                <li><a href="#sub">Sociale Medier</a></li>
               </ul>
             </li>
           </ul>
@@ -72,7 +85,7 @@
 
 <main>
 
-    <section class="intro">
+    <div class="intro">
         <section class="indhold">
         <h1>Workshops og arrangementer</h1>
         <h2>Plads til både drømme og underholdning</h2>
@@ -81,7 +94,7 @@
         <p>Radar ved, at musikken er en kraft, der samler folk. For mange unge handler det om mere end at spille – det handler om at blive en del af et fællesskab. Workshopsene skaber forbindelser mellem musikere, der deler samme passion, og åbner døren for samarbejder, der kan føre til noget større.</p>
         <p>Uanset om du ønsker at deltage i arrangementer med arbejdet, vennerne eller dig selv, så sørger Radar for god underholdning mens du kan sænke skuldrene og føle dig som en del af holdet. </p> <p>Bliv klogere på Radars forskellige muligheder for workshops og arrangementer lige her! </p>
         </section>
-    </section>
+    </div>
 
 
     <section class="workshops">
@@ -121,39 +134,57 @@
     </section>
 
 
-    <section class="workshops">
+  <section class="workshops">
         <h3>Arrangementer</h3>
     <!--Fået hjælp fra W3schools - https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp-->
     <div class="scroll-beholder">
-      <div class="billeder">
+        <div class="billeder">
+        <h4 class="image-title">Open mic</h4>
         <img src="/Images/openmic_arrangement.png" alt="openmic_arrangement">
         <button class="btn">Læs mere</button>
         </div>
 
         <div class="billeder">
+          <h4 class="image-title">Latterklub</h4>
         <img src="/Images/latterklub_arrangement.png" alt="latterklub_arrangement">
         <button class="btn">Læs mere</button>
         </div>
 
         <div class="billeder">
+          <h4 class="image-title">Oplæg fra Radars frivillige</h4>
         <img src="/Images/friviilig_arrangement.png" alt="frivillig_oplæg_arrangement">
         <button class="btn">Læs mere</button>
         </div>
 
         <div class="billeder">
+          <h4 class="image-title">Kareoke aften</h4>
         <img src="/Images/kareoke_arrangement.png" alt="kareoke_arrangement">
         <button class="btn">Læs mere</button>
         </div>
-    </section>
+    </div>
+  </section>
 
 <!--Fået hjælp fra W3schools - https://www.w3schools.com/html/html_form_input_types.asp-->
     <section class="ideforslag">
-        <h2>Kom med dine ideer til workshops eller arrangementer</h2>
+
+    <h2>Kom med dine ideer til workshops eller arrangementer</h2>
+
+      <!-- Checkbox til styring af tak-besked -->
+    <input type="checkbox" id="form-sent" hidden>
+    
+    <div class="formular-container">
         <form class="ideforslagformular">
             <input type="text" placeholder="Skriv din idé her" required>
-          <input type="email" placeholder="Indtast din e-mail" required>
-          <button type="submit">Indsend</button>
+            <input type="email" placeholder="Indtast din e-mail" required>
+            <button type="submit" onclick="document.getElementById('form-sent').checked = true; return false;">Indsend</button>
         </form>
+        
+        <!-- Tak for svar-besked -->
+        <div class="thank-you-message">
+            Tak for dit svar!
+        </div>
+      </div>
+        
     </section>
 
 
@@ -167,17 +198,17 @@
       
         <p>Email: Kontakt(@)radarlive.dk<p>
         <p>Booking: Booking(@)radarlive.dk</p>
-    </p>Telefon: +45 8676 0344</p>
-  </p>Karen Wegeners Gade 6 DK 8000 Aarhus C</p>
+    <p>Telefon: +45 8676 0344</p>
+  <p>Karen Wegeners Gade 6 DK 8000 Aarhus C</p>
 
     </div>
 
     <div class="footer-section">
       <h4>Følg os</h4>
       <div class="social-icons">
-        <a href="https://www.facebook.com/radarlive"><img src="/Images/facebook.png" class="fb"></a>
-        <a href="https://www.instagram.com/radarlive/"><img src="/Images/instagram.png" class="insta"></a>
-        <a href="https://www.youtube.com/@radarliverec"><img src="/Images/youtube.png" class="yt"></a>
+        <a href="https://www.facebook.com/radarlive"><img src="/Images/facebook.png" alt="følg_os_på_facebookikon" class="fb"></a>
+        <a href="https://www.instagram.com/radarlive/"><img src="/Images/instagram.png" alt="følg_os_på_instagramikon" class="insta"></a>
+        <a href="https://www.youtube.com/@radarliverec"><img src="/Images/youtube.png" alt="følg_os_på_youtubeikon" class="yt"></a>
       </div>
     </div>
   </div>

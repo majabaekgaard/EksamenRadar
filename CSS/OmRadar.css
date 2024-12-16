@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #EDE8E1;
+    background-color: var(--baggrund);
 }
 
 .bangers-regular {
@@ -22,13 +22,16 @@ body, html {
     --blå: #0d63c0;
 }
 
+.frivillig{
+    text-decoration: none;
+    color: var(--menu);
+ 
+}
 
 /*styling af logo */
 .logo img {
     width: 250px;
     height: auto;
-    text-align: center;
-    white-space: nowrap;
     flex-shrink: 0;
     position:sticky;
 

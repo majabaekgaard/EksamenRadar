@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kunstnerne | Radar</title>
+    <title>Radar | Mød kunstnerne</title>
     <link rel="stylesheet" href="CSS/Kunstnerne.css">
+
+    <meta name="title" content="Radar | Mød kunstnerne">
+    <meta name="description" content="Undersiden beskriver kort nogle af forårets kunstnerne på Radar. Her er der mulighed for at blive klogere på dem, samt deres musik ved at høre et lydklip fra en af deres sange">
+    <meta name="keywords" content="sange for livet, sange som, hvad betyder sange, musik, kunstnere, Sorthandsk, SYL og Omsorg, Anna Roemer, Bissesvinet, Gorgeous, Baryl,  historier">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Danish">
+    <meta name="author" content="Maja Camilla Bækgaard">
+
+    <!--Bruges til star rating - fået hjælp fra W3schools - https://www.w3schools.com/howto/howto_css_star_rating.asp-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Poppins:wght@100;400&display=swap');
+        </style> 
+
 </head>
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Poppins:wght@100;400&display=swap');
-    </style>
+
 
 <body>
     
     <header>
+        <!--Fået hjælp til nav bar vha af ChatGPT - https://chatgpt.com/share/67607854-0e70-8003-b74b-6d5b4847913b-->
         <nav>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="burger-menu">
@@ -29,28 +44,29 @@
           
             <ul class="nav-links">
               <li>
-                <a href="#">Alt om Radar</a>
+                <a href="#">Om Radar</a>
                   <ul class="dropdown">
                     <li><a href="OmRadar.html">Historie og Koncept</a></li>
                     <li><a href="Kunstnerne.html">Mød kunstnerne</a></li>
-                    <li><a href="#">Gæsternes oplevelser</a></li>
+                    <li><a href="#sub">Gæsternes oplevelser</a></li>
                   </ul>
                 </li>
   
               <li>
               <a href="#">Fællesskab</a>
               <ul class="dropdown">
-                <li><a href="#">Frivillig</a></li>
-                <li><a href="#">Donation og støtte</a></li>
-                <li><a href="#">Ny på Radar?</a></li>
-                <li><a href="#">Oplev stemningen</a></li>
+                <li><a href="#sub">Frivillig</a></li>
+                <li><a href="#sub">Donation og støtte</a></li>
+                <li><a href="#sub">Ny på Radar?</a></li>
+                <li><a href="#sub">Oplev stemningen</a></li>
               </ul>
             </li>
   
             <li>
               <a href="#">Program</a>
               <ul class="dropdown">
-                <li><a href="#sub1">Kommende aktiviteter</a></li>
+                <li><a href="#sub">Koncerter</a></li>
+                <li><a href="#sub">Kommende aktiviteter</a></li>
                 <li><a href="workshops.html">Workshops & <br> arrangementer</a></li>
               </ul>
             </li>
@@ -58,10 +74,11 @@
             <li>
               <a href="#">Kontakt</a>
               <ul class="dropdown">
-                <li><a href="#">Åbningstider</a></li>
-                <li><a href="#">Lokation og leje</a></li>
-                <li><a href="#">Lån af udstyr</a></li>
-                <li><a href="#">Sociale Medier</a></li>
+                <li><a href="#sub">Åbningstider</a></li>
+                <li><a href="#sub">Lokation og leje</a></li>
+                <li><a href="#sub">Lån af udstyr</a></li>
+                <li><a href="#sub">Studierabat</a></li>
+                <li><a href="#sub">Sociale Medier</a></li>
               </ul>
             </li>
           </ul>
@@ -70,7 +87,7 @@
 
 <main>
 
-    <section class="intro">
+    <div class="intro">
         <section class="indhold">
         <h1>Forårets kunstnere på Radar</h1>
         <p>Hvad betyder sange for dig? Er det lyden af ungdommens minder, inspirationen fra en kunstner eller det fællesskab, som musikken skaber? Radar er stedet, hvor musikken lever og ånder – uanset om det er sange for livet eller noget, der overrasker og rører os på nye måder.</p> <p>På Radar kan du opleve en bred vifte af kunstnere, der alle brænder for at dele deres historier gennem musikken. Fra intime sange som kærtegn for sjælen til rytmer, der får kroppen til at danse – Radar er et mekka for nysgerrige musikelskere. Her finder du ikke kun velkendte navne, men også upcoming artister, der giver dig chancen for at opdage det næste store talent.
@@ -78,21 +95,21 @@
             </p>
             
         </section>
-    </section>
+    </div>
 
 
     
 
-<section class="beholder">
+<div class="beholder">
     <section class="kunstnerbox">
         <!--Implamentering af lydfil oven på billed ved hover/klik - Har fået hjælp fra ChatGPT til denne løsning: https://chatgpt.com/share/675a04f3-f74c-8003-8414-445db58c78a2*/-->
         <div class="musik">
-        <div class="kunstnerbillede" style="background-image: url(/Images/kunstner1.jpg);">
+        <div class="kunstnerbillede" alt="billedeafSorthandsk" style="background-image: url(/Images/kunstner1.jpg);">
         
             <!--Link fra spotify - https://open.spotify.com/track/36tusPo4XIrkGuNfFae7GN?si=cbcdba167bd14428-->
             <iframe style="border-radius:12px" 
             src="https://open.spotify.com/embed/track/36tusPo4XIrkGuNfFae7GN?utm_source=generator&theme=0" 
-            width="100%" 
+            width="100" 
             height="80" 
             frameBorder="0" 
             allowfullscreen="" 
@@ -102,7 +119,16 @@
         </div>
         <div class="kunstnerinfo">
             <h2>Sorthandsk</h2>
+            <h3>8/3</h3>
             <p> Trioen fra Aarhus - blander smuk lyrik med det hårde og rå. Gennem musikken fortæller de om barske historier, kommer ud med frustrationer og forklare om minoriteters livsomstændigheder.</p> <p>Sorthandsk vil med deres tekster vise den til tider rå virkelighed der desværre findes i verden, og Danmark. De skaber en debat og viser, at musikken kan være et godt alternativ til at komme ud med hverdagens frustrationer. </p>
+            
+            <!--Fået hjælp fra W3schools - https://www.w3schools.com/howto/howto_css_star_rating.asp-->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            
             <div class="buttons">
                 <a href="#sub">Køb billet</a>
                 <a href="#sub">Læs mere</a>
@@ -115,12 +141,12 @@
 
     <section class="kunstnerbox2">
         <div class="musik">
-        <div class="kunstnerbillede2" style="background-image: url(/Images/kunstner2.jpg);">
+        <div class="kunstnerbillede2" alt="billedeafSyl+Omsorg" style="background-image: url(/Images/kunstner2.jpg);">
 
             <!--Link fra spotify - https://open.spotify.com/track/5YJxXEpkddXLcY5TUdbxAW?si=e921138877404403-->
             <iframe style="border-radius:12px" 
             src="https://open.spotify.com/embed/track/5YJxXEpkddXLcY5TUdbxAW?utm_source=generator&theme=0" 
-            width="100%" 
+            width="100" 
             height="152" 
             frameBorder="0" 
             allowfullscreen="" 
@@ -131,7 +157,16 @@
         </div>
         <div class="kunstnerinfo2">
             <h2>Syl + Omsorg</h2>
+            <h3>22/3</h3>
             <p>To bands bliver til ét - her sker en sammensmeltning af brutal hårdhed og bløde tekster.</p> <p> De vil sammen nå ud til publikum, åbne op for de svære emner og agerer som et stor kram til publikum og fællesskabet. Men de gør det på en måde, der får dig op af stolen mens de sørger for du bliver blæst bagover af vokaler og ærlige tekster. </p>
+            
+            
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+
             <div class="buttons2">
                 <a href="#sub">Køb billet</a>
                 <a href="#sub">Læs mere</a>
@@ -143,12 +178,12 @@
     
     <section class="kunstnerbox3">
         <div class="musik">
-        <div class="kunstnerbillede2" style="background-image: url(/Images/kunstner3.jpg);">
+        <div class="kunstnerbillede2" alt="billedeafAnnaRoemer" style="background-image: url(/Images/kunstner3.jpg);">
             
             <!--Link fra spotify - https://open.spotify.com/track/5Bsml7eGR3R39NhC6UcWMf?si=5d9b5b87da3b4647-->
             <iframe style="border-radius:12px" 
                 src="https://open.spotify.com/embed/track/5Bsml7eGR3R39NhC6UcWMf?utm_source=generator&theme=0" 
-                width="100%" 
+                width="100" 
                 height="152" 
                 frameBorder="0" 
                 allowfullscreen="" 
@@ -159,7 +194,15 @@
         </div>
         <div class="kunstnerinfo3">
             <h2>Anna Roemer</h2>
+            <h3>12/4</h3>
             <p>Pigen med guitaren. Anna Roemer overrasker gang på gang med hendes musikalske og tekniske evner på guitaren. Hun formår at skabe et billedeligt og drømmende univsers der både balancere mellem det mørke og triste, men modsat også det lyse og glade.</p><p> Med sit store talent har Anna formået at få 6 stjerner fra GAFFA, så tøv ikke med at få bestilt de næste billetter og oplev hvad hun kan! </p>
+            
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+
             <div class="buttons3">
                 <a href="#sub">Køb billet</a>
                 <a href="#sub">Læs mere</a>
@@ -174,12 +217,12 @@
 
     <section class="kunstnerbox4">
         <div class="musik">
-        <div class="kunstnerbillede4" style="background-image: url(/Images/kunstner4.jpg);">
+        <div class="kunstnerbillede4" alt="billedeafBissesvinet" style="background-image: url(/Images/kunstner4.jpg);">
             
             <!--Link fra spotify - https://open.spotify.com/track/6VneEjaXlJoaxEqpbt2ewa?si=jnflCUkDQs-mPQdyyUN6UA-->
             <iframe style="border-radius:12px" 
             src="https://open.spotify.com/embed/track/6VneEjaXlJoaxEqpbt2ewa?utm_source=generator&theme=0" 
-            width="100%" 
+            width="100" 
             height="152" 
             frameBorder="0" 
             allowfullscreen="" 
@@ -190,14 +233,101 @@
         </div>
         <div class="kunstnerinfo4">
             <h2>Bissesvinet</h2>
-            <p>Her er der skabt et nyt møde mellem forsangeren Bisse og bandet SVIN. Som navnet hentyder har de skabt noget med bid i. Det er elektrisk og vildt og helt sikkert noget der vil virke som et stød i brystet.</p>
+            <h3>19/4</h3>
+            <p>Her er der skabt et nyt møde mellem forsangeren Bisse og bandet SVIN. Som navnet hentyder har de skabt noget med bid i. Det er elektrisk og vildt og helt sikkert noget der vil virke som et stød i brystet på dig!</p>
+            <p>De har sange som handler om alt fra den svære kærlighed og menneskets dumdristigheder, noget du stensikkert kan relatere til. Lyt med og bliv blæst bagover! </p>
+            
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            
             <div class="buttons4">
                 <a href="#sub">Køb billet</a>
                 <a href="#sub">Læs mere</a>
             </div>
         </div>
     </section>
-</section>
+
+
+
+    <section class="kunstnerbox4">
+        <div class="musik">
+        <div class="kunstnerbillede4" alt="billedeafGorgeous" style="background-image: url(/Images/gorgeous.png);">
+            
+            <!--Link fra spotify - https://open.spotify.com/track/6VneEjaXlJoaxEqpbt2ewa?si=jnflCUkDQs-mPQdyyUN6UA-->
+            <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/track/3ZEPcSMeVRHX93dd4t06kV?utm_source=generator" 
+            width="100" 
+            height="152" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy"></iframe>
+        
+        </div>
+        </div>
+        <div class="kunstnerinfo4">
+            <h2>GORGEOUS</h2>
+            <h3>10/5</h3>
+            <p>Som navnet siger er de G-O-R-G-E-O-U-S!</p> 
+            <p>Duoen består af Marie og Christoffer. Sammen skaber de poppet, fint og moderne musik du ikke kan få ud af hovedet.</p>
+            <p>Bandet har siden de debutterede haft massere af succes og med god grund. Bandet har bl.a formået at fylde VEGA op, været på tour med Phlake og skrevet sig på plakaten til Roskilde Festival. </p>
+
+            <p>Nu står de på plakaten hos Radar, kom og vær med til at fylde salen op! Vi ses!</p>
+            
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            
+            <div class="buttons4">
+                <a href="#sub">Køb billet</a>
+                <a href="#sub">Læs mere</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="kunstnerbox4">
+        <div class="musik">
+        <div class="kunstnerbillede4" alt="billedeafBaryl" style="background-image: url(Images/BARYL.png);">
+            
+            <!--Link fra spotify - https://open.spotify.com/track/6VneEjaXlJoaxEqpbt2ewa?si=jnflCUkDQs-mPQdyyUN6UA-->
+            <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/track/6HQtcHNtffaOly9aDBVxfZ?utm_source=generator&theme=0" 
+            width="100" 
+            height="152" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy"></iframe>
+        
+        </div>
+        </div>
+        <div class="kunstnerinfo4">
+            <h2>BARYL</h2>
+            <h3>17/5</h3>
+            <p>Når man siger Baryl siger man også Jazz. På Radar kan du møde jazz bandet BARYL. De 5 barylere kan imponere med moderne og legende spil der bryder med fortidens traditioner.</p> 
+            <p>Politiken skrev i 2022: "Om ikke mange år kan barylerne ende med at blive en af landets mest efterspurgte grupper. De er i hvert fald ved at støbe fundamentet til noget rigtig stort." </p>
+            <p>Hvis du er klar til noget rigtig stort, så skynd dig at købe billet nu!</p>
+                
+            
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            
+            <div class="buttons4">
+                <a href="#sub">Køb billet</a>
+                <a href="#sub">Læs mere</a>
+            </div>
+        </div>
+    </section>
+</div>
 
 
 
@@ -209,19 +339,19 @@
       <div class="footer-section">
         <h4>Kontakt</h4>
         
-          <p>Email: Kontakt(@)radarlive.dk<p>
+          <p>Email: Kontakt(@)radarlive.dk</p>
           <p>Booking: Booking(@)radarlive.dk</p>
-      </p>Telefon: +45 8676 0344</p>
-    </p>Karen Wegeners Gade 6 DK 8000 Aarhus C</p>
+      <p>Telefon: +45 8676 0344</p>
+    <p>Karen Wegeners Gade 6 DK 8000 Aarhus C</p>
   
       </div>
 
       <div class="footer-section">
         <h4>Følg os</h4>
         <div class="social-icons">
-          <a href="https://www.facebook.com/radarlive"><img src="/Images/facebook.png" class="fb"></a>
-          <a href="https://www.instagram.com/radarlive/"><img src="/Images/instagram.png" class="insta"></a>
-          <a href="https://www.youtube.com/@radarliverec"><img src="/Images/youtube.png" class="yt"></a>
+            <a href="https://www.facebook.com/radarlive"><img src="/Images/facebook.png" alt="følg_os_på_facebookikon" class="fb"></a>
+            <a href="https://www.instagram.com/radarlive/"><img src="/Images/instagram.png" alt="følg_os_på_instagramikon" class="insta"></a>
+            <a href="https://www.youtube.com/@radarliverec"><img src="/Images/youtube.png" alt="følg_os_på_youtubeikon" class="yt"></a>
         </div>
       </div>
     </div>

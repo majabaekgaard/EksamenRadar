@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar | forside</title>
+    <title>Radar | Forside</title>
     <link rel="stylesheet" href="CSS/style.css">
 
+    <meta name="title" content="Radar | forside">
+    <meta name="description" content="Hjemmesiden for spillestedet Radar. Forsiden beskriver kort mulighederne på Radar, herunder koncerter, workshops og arrangementer samt mulighederne for at blive frivillig og en del af et fællesskab.">
+    <meta name="keywords" content="musik og ungdom, musik for alle, er musik kunst, hvordan påvirker musik os, radar, spillested, fællesskab, støtte, kultur, venner, workshop, arrangement, musik">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Danish">
+    <meta name="author" content="Maja Camilla Bækgaard">
 
-    <!--link til font awesome - bruges til SoMe ikoner KIG--> 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> 
+     <!--link til font "Bangers"-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Poppins:wght@100;400&display=swap');
+    </style>
+
 </head>
 <body>
     
   
 
-  <!--link til font "Bangers"-->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Poppins:wght@100;400&display=swap');
-    </style>
-
+ 
 
 
 
@@ -27,7 +32,7 @@
     </header>
        
     <main>
-      
+      <!--Fået hjælp til nav bar vha af ChatGPT - https://chatgpt.com/share/67607854-0e70-8003-b74b-6d5b4847913b-->
       <nav>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="burger-menu">
@@ -43,7 +48,7 @@
       
         <ul class="nav-links">
           <li>
-            <a href="#sub">Alt om Radar</a>
+            <a href="#sub">Om Radar</a>
               <ul class="dropdown">
                 <li><a href="OmRadar.html">Historie og Koncept</a></li>
                 <li><a href="Kunstnerne.html">Mød kunstnerne</a></li>
@@ -64,6 +69,7 @@
         <li>
           <a href="#sub">Program</a>
           <ul class="dropdown">
+            <li><a href="#sub">Koncerter</a></li>
             <li><a href="#sub">Kommende aktiviteter</a></li>
             <li><a href="workshops.html">Workshops & <br> arrangementer</a></li>
           </ul>
@@ -75,7 +81,9 @@
             <li><a href="#sub">Åbningstider</a></li>
             <li><a href="#sub">Lokation og leje</a></li>
             <li><a href="#sub">Lån af udstyr</a></li>
+            <li><a href="#sub">Studierabat</a></li>
             <li><a href="#sub">Sociale Medier</a></li>
+            
           </ul>
         </li>
       </ul>
@@ -96,6 +104,7 @@
             <section id="section2">
                 <h2>Musik for alle - også dig!</h2>
                 <p>Måske tænker du: "Er der noget for mig?" Svaret er ja. Radar er et sted, hvor vi tror på musik for alle. <br> Uanset om du er fan af niche-genrer eller mest til noget, der lyder velkendt, har vi noget til dig. .</p>
+                <p>Og det bedste af det hele? - Vi tilbyder studierabat til alle studerende!</p>
             </section>
 
                 <div class="flexbox1">
@@ -114,9 +123,9 @@
                 <h2>Radar er i fare - du gør en forskel!</h2>
                 <p>Radar er et unikt og vigtigt kultursted i Aarhus, men vores eksistens er truet, og vi har brug for din støtte.</p> 
 
-                    <p>Ved at deltage i vores arrangementer hjælper du med at sikre, at Radar kan fortsætte med at være et sted for musik, kunst og fællesskab.</p>
+                    <p>Ved at deltage i vores koncerter og arrangementer hjælper du med at sikre, at Radar kan fortsætte med at være et sted for musik, kultur og fællesskab.</p>
                     
-                    <p>Er du interesseret i at gøre endnu mere?  Hver bidrag – stort eller småt – gør en forskel og hjælper os med at opretholde Radars rolle som et kulturelt mødested for alle. - Læs mere om, hvordan du kan støtte her
+                    <p>Er du interesseret i at gøre endnu mere?  Hver bidrag – stort eller småt – gør en forskel og hjælper os med at opretholde Radars rolle som et kulturelt mødested for alle. - Læs mere om, hvordan du kan støtte <a href="#sub" class="donation">her</a>
                     </p>
             </section>
 
@@ -190,14 +199,28 @@
               
         
          <!--Fået hjælp fra W3schools - https://www.w3schools.com/html/html_form_input_types.asp-->
-          <div class="nyhedsbrev">
-            <h2>Tilmeld dig vores nyhedsbrev</h2>
+    <section class="nyhedsbrev">
+      <h2>Download vores flier til forårets største begivenheder <a href="/Images/infographic.jpg" class="download">her!</a></h2>  
+      <h2>Eller tilmeld dig vores nyhedsbrev </h2>
             <p>Få de seneste opdateringer på kommende koncerter, arrangementer og workshops!</p>
-            <form class="nyhedsbrevformular">
-              <input type="email" placeholder="Indtast din e-mail" required>
-              <button type="submit">Tilmeld</button>
-            </form>
+
+        <!-- Checkbox til styring af tak-besked -->
+        <input type="checkbox" id="form-sent" hidden>
+    
+        <div class="formular-container">
+          <form class="nyhedsbrevformular">
+              <input type="tel" id="phone" name="phone" placeholder="Indtast dit telefon nr. her"
+              pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required> 
+              <button type="submit" onclick="document.getElementById('form-sent').checked = true; return false;" >Tilmeld</button>
+              <!-- Tak for svar-besked -->
+          </form>
+
+          <div class="thank-you-message">
+          Tak for din tilmelding!
           </div>
+        </div>
+          
+    </section>
 
 
         </main>
@@ -220,9 +243,9 @@
             <div class="footer-section">
               <h4>Følg os</h4>
               <div class="social-icons">
-                <a href="https://www.facebook.com/radarlive"><img src="/Images/facebook.png" class="fb"></a>
-                <a href="https://www.instagram.com/radarlive/"><img src="/Images/instagram.png" class="insta"></a>
-                <a href="https://www.youtube.com/@radarliverec"><img src="/Images/youtube.png" class="yt"></a>
+                <a href="https://www.facebook.com/radarlive"><img src="/Images/facebook.png" alt="følg_os_på_facebookikon" class="fb"></a>
+                <a href="https://www.instagram.com/radarlive/"><img src="/Images/instagram.png" alt="følg_os_på_instagramikon" class="insta"></a>
+                <a href="https://www.youtube.com/@radarliverec"><img src="/Images/youtube.png" alt="følg_os_på_youtubeikon" class="yt"></a>
               </div>
             </div>
           </div>

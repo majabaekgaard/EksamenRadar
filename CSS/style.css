@@ -3,12 +3,17 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #EDE8E1;
+    background-color: var(--baggrund);
     
 
   
 }
-
+:root{
+    --baggrund: #EDE8E1; 
+    --menu: #A53455;
+    --orange:#F49737; 
+    --blå: #0d63c0;
+}
 
 .bangers-regular {
     font-family: "Bangers", system-ui;
@@ -25,12 +30,14 @@ p{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-:root{
-    --baggrund: #EDE8E1; 
-    --menu: #A53455;
-    --orange:#F49737; 
-    --blå: #0d63c0;
+
+
+.donation{
+text-decoration: none;
+color: var(--menu);
+
 }
+
 
 /*styrer det første baggrundsbillede */
 header {
@@ -53,8 +60,6 @@ header {
 .logo img {
     width: 250px;
     height: auto;
-    text-align: center;
-    white-space: nowrap;
     flex-shrink: 0;
     position:sticky;
     max-width: 100%;
@@ -296,7 +301,6 @@ div.scroll-beholder {
   div.scroll-beholder img {
     padding: 10px;
     
-    
   }
 
   /* Fået hjælp fra cht GPT til stregen */
@@ -336,7 +340,6 @@ div.scroll-beholder img:hover {
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   background-color: var(--blå);
   color: white;
   font-size: 16px;
@@ -397,8 +400,15 @@ div.scroll-beholder img:hover {
     font-size: 30px;
     margin-bottom: 10px;
     color: #000000;
+    
   }
   
+  .download{
+    text-decoration: none;
+    color: var(--menu);
+  }
+  
+
   .nyhedsbrev p {
     color: #000000;
     margin-bottom: 20px;
@@ -439,7 +449,33 @@ div.scroll-beholder img:hover {
     background-color: #0056b3;
   }
 
-
+ /* Formular container */
+ .formular-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Tak for svar-besked */
+  .thank-you-message {
+    display: none;
+    background-color: var(--blå);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: "Bangers", system-ui;
+    font-size: larger;
+  }
+  
+  /* Vis beskeden og skjul formularen, når checkbox er markeret */
+  #form-sent:checked ~ .formular-container .thank-you-message {
+    display: block;
+  }
+  
+  #form-sent:checked ~ .formular-container .nyhedsbrevformular {
+    display: none;
+  }
 
 /* STYLING AF FOOTER BEGYNDER HER */
 
@@ -467,7 +503,7 @@ div.scroll-beholder img:hover {
     margin: 10px;
     min-width: 200px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+    color: #ffffff;
     font-size: 18px;
 
   }
@@ -652,7 +688,8 @@ div.scroll-beholder img:hover {
   
   div.scroll-beholder img {
     padding: 10px;
-    scale: 70%;
+    width: 100%;
+    padding-left: 55px;
 
   }
 

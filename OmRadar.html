@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Radar | Radar </title>
+    <title>Radar | Spillestedets historie og koncept</title>
     <link rel="stylesheet" href="CSS/OmRadar.css">
-</head>
+   
+<meta name="title" content="Radar | Spillestedets historie og koncept">
+<meta name="description" content="Underside der fortæller om spillestedets historie og koncept. Her bliver der bl.a. beskrevet, hvad de gør for kulturlivet og fællesskabet.">
+<meta name="keywords" content="Kultur for alle, Kultur for unge, Hvorfor er kultur vigtigt, kultur, fællesskab, Radar, spillested, konceptet, studerende, musik">
+<meta name="robots" content="index, follow">
+<meta name="language" content="Danish">
+<meta name="author" content="Maja Camilla Bækgaard">
 
+<!--link til font "Bangers"-->
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Poppins:wght@100;400&display=swap');
     </style>
+</head>
+
+
 
 <body>
     
 
     <header>
+        <!--Fået hjælp til nav bar vha af ChatGPT - https://chatgpt.com/share/67607854-0e70-8003-b74b-6d5b4847913b-->
         <nav>
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="burger-menu">
@@ -30,39 +41,41 @@
           
             <ul class="nav-links">
               <li>
-                <a href="#">Alt om Radar</a>
+                <a href="#">Om Radar</a>
                   <ul class="dropdown">
                     <li><a href="OmRadar.html">Historie og Koncept</a></li>
                     <li><a href="Kunstnerne.html">Mød kunstnerne</a></li>
-                    <li><a href="#">Gæsternes oplevelser</a></li>
+                    <li><a href="#sub">Gæsternes oplevelser</a></li>
                   </ul>
                 </li>
   
               <li>
-              <a href="#">Fællesskab</a>
+              <a href="#sub">Fællesskab</a>
               <ul class="dropdown">
-                <li><a href="#">Frivillig</a></li>
-                <li><a href="#">Donation og støtte</a></li>
-                <li><a href="#">Ny på Radar?</a></li>
-                <li><a href="#">Oplev stemningen</a></li>
+                <li><a href="#sub">Frivillig</a></li>
+                <li><a href="#sub">Donation og støtte</a></li>
+                <li><a href="#sub">Ny på Radar?</a></li>
+                <li><a href="#sub">Oplev stemningen</a></li>
               </ul>
             </li>
   
             <li>
-              <a href="#">Program</a>
+              <a href="#sub">Program</a>
               <ul class="dropdown">
+                <li><a href="#sub">Koncerter</a></li>
                 <li><a href="#sub1">Kommende aktiviteter</a></li>
                 <li><a href="workshops.html">Workshops & <br> arrangementer</a></li>
               </ul>
             </li>
   
             <li>
-              <a href="#">Kontakt</a>
+              <a href="#sub">Kontakt</a>
               <ul class="dropdown">
-                <li><a href="#">Åbningstider</a></li>
-                <li><a href="#">Lokation og leje</a></li>
-                <li><a href="#">Lån af udstyr</a></li>
-                <li><a href="#">Sociale Medier</a></li>
+                <li><a href="#sub">Åbningstider</a></li>
+                <li><a href="#sub">Lokation og leje</a></li>
+                <li><a href="#sub">Lån af udstyr</a></li>
+                <li><a href="#sub">Studierabat</a></li>
+                <li><a href="#sub">Sociale Medier</a></li>
               </ul>
             </li>
           </ul>
@@ -84,14 +97,14 @@
 </div>
 
 
-<section class="intro">
+<div class="intro">
     <section class="indhold">
     <h2>Kultur for alle</h2>
     <p>Det er den kerneværdi, som vi på Radar bygger på. Beliggende midt i byens pulserende kulturliv er Radar ikke bare en scene – det er et mødested, hvor fællesskab, musik og mangfoldighed går hånd i hånd.
         For mange unge kan det være svært at finde inspiration til at deltage i ukendte kulturelle oplevelser. Men Radar gør en dyd ud af at gøre kulturen tilgængelig for dig - for alle – uanset om du elsker nichemusik, eller bare søger et sted at være social.
         </p>
     </section>
-</section>
+</div>
 
 <section class="Indhold1">
 
@@ -133,7 +146,7 @@
         <h2>Oplev fællesskabet på Radar</h2>
         <p>
             Radar er ikke kun for dem, der allerede elsker musikken. Det er for alle, der tør tage et skridt ind i en verden af fællesskab, inspiration og nye oplevelser. Så næste gang du søger kultur for alle eller undrer dig over, hvorfor kultur er vigtigt, er Radar stedet, der giver dig svar.
-        </p><p>Kom og vær en del af noget større. Tjek vores side, bliv inspireret og tag del i fællesskabet - hvad enten om det er som frivillig, artist eller publikum!</p> <p>Du kan læse mere om at blive frivillig <a href="#">her</a></p>
+        </p><p>Kom og vær en del af noget større. Tjek vores side, bliv inspireret og tag del i fællesskabet - hvad enten om det er som frivillig, artist eller publikum!</p> <p>Du kan læse mere om at blive frivillig <a href="#sub" class="frivillig">her</a></p>
     </div>
 </section>
 
@@ -148,17 +161,17 @@
         
           <p>Email: Kontakt(@)radarlive.dk<p>
           <p>Booking: Booking(@)radarlive.dk</p>
-      </p>Telefon: +45 8676 0344</p>
-    </p>Karen Wegeners Gade 6 DK 8000 Aarhus C</p>
+      <p>Telefon: +45 8676 0344</p>
+    <p>Karen Wegeners Gade 6 DK 8000 Aarhus C</p>
   
       </div>
 
       <div class="footer-section">
         <h4>Følg os</h4>
         <div class="social-icons">
-          <a href="https://www.facebook.com/radarlive"><img src="/Images/facebook.png" class="fb"></a>
-          <a href="https://www.instagram.com/radarlive/"><img src="/Images/instagram.png" class="insta"></a>
-          <a href="https://www.youtube.com/@radarliverec"><img src="/Images/youtube.png" class="yt"></a>
+            <a href="https://www.facebook.com/radarlive"><img src="/Images/facebook.png" alt="følg_os_på_facebookikon" class="fb"></a>
+            <a href="https://www.instagram.com/radarlive/"><img src="/Images/instagram.png" alt="følg_os_på_instagramikon" class="insta"></a>
+            <a href="https://www.youtube.com/@radarliverec"><img src="/Images/youtube.png" alt="følg_os_på_youtubeikon" class="yt"></a>
         </div>
       </div>
     </div>

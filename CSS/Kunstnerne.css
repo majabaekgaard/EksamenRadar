@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #EDE8E1;
+    background-color: var(--baggrund);
 }
 
 .bangers-regular {
@@ -18,12 +18,16 @@ body, html {
     --blå: #0d63c0;
 }
 
+
+.checked {
+    color: orange;
+    margin-top: 20px;
+  }
+
 /*styling af logo */
 .logo img {
     width: 250px;
     height: auto;
-    text-align: center;
-    white-space: nowrap;
     flex-shrink: 0;
     position:sticky;
 
@@ -238,6 +242,16 @@ nav::before {
     font-size: 2em;
 }
 
+ h3 {
+    margin: 0 0 10px;
+    font-size: 350%;
+    font-family: "Bangers", system-ui;
+    margin-left: 77%;
+    margin-top: -10%;
+
+}
+
+
 .kunstnerinfo p {
     margin: 0 0 10px;
     
@@ -291,7 +305,7 @@ nav::before {
 
 /* Spotify iframe */
 .musik iframe {
-    position: absolute; /* Fjerner det fra dokumentflowet */
+    position: relative; /* Fjerner det fra dokumentflowet */
     top: 0;
     left: 0;
     width: 100%; /* Sørger for, at iframe fylder hele containeren */
@@ -740,6 +754,8 @@ p{
     .buttons4 {
         justify-content: center; /* Knapper centreres */
     }
+
+    
 }
 
 
@@ -837,7 +853,16 @@ p{
         
     }
 
-  
+
+    
+    h3 {
+        margin: 0 0 10px;
+        font-size: 300%;
+        font-family: "Bangers", system-ui;
+        margin-left: 70%;
+        margin-top: -10%;
+    
+    }
   
 }
 
@@ -870,6 +895,7 @@ p{
 
     .buttons2 {
         justify-content: center; /* Knapper centreres */
+     
     }
 
     .kunstnerbox3 {
@@ -888,6 +914,16 @@ p{
 
     .buttons4 {
         justify-content: center; /* Knapper centreres */
+    }
+
+
+    h3 {
+        margin: 0 0 10px;
+        font-size: 300%;
+        font-family: "Bangers", system-ui;
+        margin-left: 72%;
+        margin-top: -10%;
+    
     }
 
     }
