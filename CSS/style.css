@@ -254,32 +254,23 @@ h1{
 .flexindholdbilled{
     display: flex;
     width: 100%;
-    max-width: 100%;
-   
-    
-    
+    max-width: 100%; 
 }
 
 .billeder img{
-     
     max-width: 100%; 
     height: auto; 
     display: block; 
     margin: 1rem auto; 
     width: 70%;
     margin-top: 100px;
-    max-width: 100%;
-   
-      
+    max-width: 100%;  
 }
 
 /* placerer billede 2 og 3 ved siden af hinanden */
 .billede23{
     display: flex;
     max-width: 100%;
-
-
-    
 }
 
 

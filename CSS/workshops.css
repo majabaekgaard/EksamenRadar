@@ -595,11 +595,12 @@ div.scroll-beholder img:hover {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    display: block;
+    display: none;
     
     
   }
   
+ 
   .image-title{
     font-size: 30px;
     margin-bottom: 0px; /* Afstand til billedet */
@@ -716,7 +717,7 @@ div.scroll-beholder img:hover {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    display: block;
+    display: none;
     
     
   }
