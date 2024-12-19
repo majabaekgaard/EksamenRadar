@@ -79,7 +79,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: var(--baggrund);
-    padding: 0.5;
+    padding: 0.5px;
     position: sticky;
     top:0;
     z-index: 1000;
@@ -286,7 +286,6 @@ div.scroll-beholder {
     max-width: 100%;
     gap: 70px;
    
-    
   }
   
   div.scroll-beholder img {
@@ -322,7 +321,7 @@ div.scroll-beholder img:hover {
   width: 100%;
   height: auto;
   max-width: 100%;  /* sørger for at knapperne følger med - og det hele forbliver responsivt */
-  
+
 }
 
 
@@ -751,7 +750,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: var(--baggrund);
-    padding: 0.5;
+    padding: 0.5px;
     position: sticky;
     top:0;
     z-index: 1000;
